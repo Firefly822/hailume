@@ -10,7 +10,7 @@
   <head>
     <title>还撸么</title>
   </head>
-  <body>
+  <body background="http://dmimg.5054399.com/allimg/shiyan/ehrz/0.jpg">
     welcome to hailu.me
   </body>
 </html>
