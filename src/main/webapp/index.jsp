@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>还撸么</title>
+    <title>还撸么？————你们撸吧，我先不撸了</title>
   </head>
   <body>
     welcome to hailu.me
