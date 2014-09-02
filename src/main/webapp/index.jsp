@@ -11,6 +11,9 @@
     <title>还撸么？——你们撸吧，我先不撸了</title>
   </head>
   <body>
-    welcome to hailu.me!
+    <p>有人撸吗？</p>
+    <p>撸起！</p>
+    <p>还撸么？</p>
+    <p>你们撸吧，我先不撸了。</p>
   </body>
 </html>
