@@ -19,7 +19,14 @@ public class WebController {
     public ModelAndView index() {
         ModelAndView model = new ModelAndView();
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("newvalue", "http://image.qtv.com.cn/0/11/53/57/11535780_842371.jpg");
+        params.put("headerText1","Strong");
+        params.put("content1","有人撸吗？");
+        params.put("headerText2","Kankan");
+        params.put("content2","撸起!");
+        params.put("headerText3","Liu");
+        params.put("content3","还撸么？");
+        params.put("headerText4","Firefly");
+        params.put("content4","你们撸吧，我先不撸了。");
         model.addAllObjects(params);
         model.setViewName("newpage");
         return model;
