@@ -8,6 +8,8 @@
 
     <mvc:annotation-driven />
 
+    <mvc:resources mapping="/static/**" location="/static/" />
+
     <context:component-scan base-package="me.hailu.controller" />
 
     <!-- ViewResolver -->

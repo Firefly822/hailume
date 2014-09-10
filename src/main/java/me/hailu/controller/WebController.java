@@ -23,12 +23,12 @@ public class WebController {
         params.put("content1","有人撸吗？");
         params.put("headerText2","Strong");
         params.put("content2","撸起!");
-        params.put("headerText3","Liu");
+        params.put("headerText3","Troy");
         params.put("content3","还撸么？");
         params.put("headerText4","Firefly");
         params.put("content4","你们撸吧，我先不撸了。");
         model.addAllObjects(params);
-        model.setViewName("newpage");
+        model.setViewName("index");
         return model;
     }
 
