@@ -34,7 +34,7 @@
     </script>
 </head>
 <body>
-
+<!-- 导航栏 -->
 <nav class="navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/views/index.jsp">还撸么</a>
+        <a class="navbar-brand" href="/index">还撸么</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -91,7 +91,7 @@
     </div><!-- /.navbar-collapse -->
 </nav>	<script type="text/javascript">
 </script>
-
+<!-- 画廊 -->
 <div class="container">
     <div id="main_area">
         <!-- Slider -->
