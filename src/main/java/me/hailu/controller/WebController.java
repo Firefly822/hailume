@@ -19,9 +19,9 @@ public class WebController {
     public ModelAndView index() {
         ModelAndView model = new ModelAndView();
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("headerText1","Strong");
+        params.put("headerText1","KANKAN");
         params.put("content1","有人撸吗？");
-        params.put("headerText2","Kankan");
+        params.put("headerText2","Strong");
         params.put("content2","撸起!");
         params.put("headerText3","Liu");
         params.put("content3","还撸么？");
