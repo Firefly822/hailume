@@ -134,52 +134,6 @@
                 </div>
             </div><!--/Slider-->
         </div>
-        <div class="row" style="margin-bottom: 10px;">
-            <div class="col-md-4 col-sm-4">
-                <div class="featured-container">
-                    <div class="featured-img" style="background: url(/static/img/img03.jpg);">
-                        <h3><a href="#">头条</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="featured-container">
-                    <div class="featured-img" style="background: url(/static/img/img04.jpg);">
-                        <h3><a href="#">二轮新秀</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="featured-container">
-                    <div class="featured-img" style="background: url(/static/img/img05.jpg);">
-                        <h3><a href="#">第三波主打</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-4">
-                <div class="featured-container">
-                    <div class="featured-img" style="background: url(/static/img/img03.jpg);">
-                        <h3><a href="#">头条</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="featured-container">
-                    <div class="featured-img" style="background: url(/static/img/img04.jpg);">
-                        <h3><a href="#">二轮新秀</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="featured-container">
-                    <div class="featured-img" style="background: url(/static/img/img05.jpg);">
-                        <h3><a href="#">第三波主打</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <!-- end:featured -->
@@ -227,7 +181,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="post-container">
                     <div class="post-content no-padding">
-                        <img src="img/img01.jpg" alt="danish personal blog template">
+                        <img src="/static/img/img01.jpg" alt="danish personal blog template">
                     </div>
                     <div class="post-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -252,7 +206,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="post-container">
                     <div class="post-content">
-                        <img src="img/img02.jpg" alt="danish personal blog template">
+                        <img src="/static/img/img02.jpg" alt="danish personal blog template">
                         <div class="heading-title heading-small">
                             <h2><a href="#">This is sample post text with featured image</a></h2>
                         </div>
@@ -309,7 +263,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="post-container">
                     <div class="post-content">
-                        <img src="img/img04.jpg" alt="danish personal blog template">
+                        <img src="/static/img/img04.jpg" alt="danish personal blog template">
                         <p>This is sample post image caption</p>
                         <div class="post-link">
                             <a href="#"><span>Read more</span></a>
