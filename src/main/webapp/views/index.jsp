@@ -162,19 +162,6 @@
                             <a href="#"><span>Read more</span></a>
                         </div>
                     </div>
-                    <div class="post-atribut">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-heart"></i> 2000</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-comments"></i> 400</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- break -->
@@ -186,19 +173,6 @@
                     <div class="post-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                    </div>
-                    <div class="post-atribut">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-heart"></i> 2000</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-comments"></i> 400</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -220,19 +194,6 @@
                             <a href="#"><span>Read more</span></a>
                         </div>
                     </div>
-                    <div class="post-atribut">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-heart"></i> 2000</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-comments"></i> 400</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- break -->
@@ -244,19 +205,6 @@
                             <small>Bardiman</small>
                         </blockquote>
                     </div>
-                    <div class="post-atribut">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-heart"></i> 2000</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-comments"></i> 400</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- break -->
@@ -267,19 +215,6 @@
                         <p>This is sample post image caption</p>
                         <div class="post-link">
                             <a href="#"><span>Read more</span></a>
-                        </div>
-                    </div>
-                    <div class="post-atribut">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-heart"></i> 2000</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-comments"></i> 400</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -299,19 +234,6 @@
                             consequat...</p>
                         <div class="post-link">
                             <a href="#"><span>Read more</span></a>
-                        </div>
-                    </div>
-                    <div class="post-atribut">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-heart"></i> 2000</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-comments"></i> 400</span></a>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4">
-                                <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
-                            </div>
                         </div>
                     </div>
                 </div>
