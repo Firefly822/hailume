@@ -48,6 +48,13 @@ public class WebController {
         return "newpage";
     }
 
+    @RequestMapping(value = "/page",method = RequestMethod.GET)
+    public ModelAndView page(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("page");
+        return modelAndView;
+    }
+
 //    @Override
 //    public ModelAndView handleRequest(HttpServletRequest httpServletRequest,
 //                                      HttpServletResponse httpServletResponse) throws Exception {

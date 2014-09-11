@@ -16,7 +16,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/static/img/favicon.png">
 
-    <title>Danish./</title>
+    <title>还撸么</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.css" rel="stylesheet">
@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse" id="navbar-top">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="/">首页</a></li>
-                <li><a href="#">关于我们</a></li>
+                <li><a href="/page">关于我们</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
