@@ -23,7 +23,17 @@
         <servlet-name>hailume</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
-    
+
+    <filter>
+        <filter-name>hailume-filter</filter-name>
+        <filter-class>me.hailu.http.HailumeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hailume-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
     <welcome-file-list>
         <welcome-file>index</welcome-file>
     </welcome-file-list>

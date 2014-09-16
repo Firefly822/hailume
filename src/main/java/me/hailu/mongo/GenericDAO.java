@@ -1,6 +1,7 @@
 package me.hailu.mongo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
 import org.bson.types.ObjectId;
 import org.jongo.MongoCollection;
@@ -8,6 +9,7 @@ import org.jongo.MongoCollection;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -41,7 +43,7 @@ public abstract class GenericDAO<T extends Model> {
         return (Class) type.getActualTypeArguments()[0];
     }
 
-    public T loadById(String id) {
+    public T loadByObjectId(String id) {
         ObjectId _id = null;
         try {
             new ObjectId(id);
@@ -51,8 +53,10 @@ public abstract class GenericDAO<T extends Model> {
         return collection.findOne(new ObjectId(id)).as(clazz);
     }
 
-    public Iterable<T> find(String query, Object... params) {
-        return collection.find(query, params).as(clazz);
+    public List<T> find(String query, Object... params) {
+        return Lists.newArrayList(
+                collection.find(query, params).as(clazz)
+        );
     }
 
     /**
@@ -82,7 +86,7 @@ public abstract class GenericDAO<T extends Model> {
         return t;
     }
 
-    public void deleteById(String id) {
+    public void deleteByObjectId(String id) {
         collection.remove(new ObjectId(id));
     }
 
@@ -94,11 +98,7 @@ public abstract class GenericDAO<T extends Model> {
         collection.remove();
     }
 
-    public MongoCollection getCollection(){
-        return collection;
-    }
-
-    private class GlobalModel implements Serializable {
+    public static class GlobalModel implements Serializable {
 
         private static final long serialVersionUID = 1L;
 
