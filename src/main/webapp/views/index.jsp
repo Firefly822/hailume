@@ -26,6 +26,8 @@
     <link href="/static/css/style.css" rel="stylesheet">
     <link href="/static/css/responsive.css" rel="stylesheet">
 
+    <link href="/static/app/css/index.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -367,6 +369,17 @@
         </div>
     </div>
 </section>
+
+<section id="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p style="text-align: center;"> © 2014 <strong>hailu.me</strong>. All Right Reserved.<a href="http://www.miitbeian.gov.cn/" target="_blank">黑ICP备14005069号</a> </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- end:partner -->
 
 
