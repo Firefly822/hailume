@@ -66,7 +66,7 @@ public abstract class GenericDAO<T extends Model> {
      */
     public T save(T t) {
         GlobalModel model = globalCollection.findAndModify(
-                "{update:{$inc:{nextId':1}}, query:{name:#}",collectionName).as(GlobalModel.class);
+                "{name:#}",collectionName).with("{$inc:{nextId:1}}").as(GlobalModel.class);
         t.id = model.nextId;
         Date now = new Date();
         t.addTime = now;

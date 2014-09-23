@@ -1,5 +1,8 @@
 package me.hailu.controller;
 
+import me.hailu.http.Constants;
+import me.hailu.user.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +18,10 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/")
 public class WebController {
+
+    @Autowired
+    private javax.servlet.http.HttpServletRequest request;
+
     @RequestMapping(value = "/index")
     public ModelAndView index() {
         ModelAndView model = new ModelAndView();
@@ -27,6 +34,12 @@ public class WebController {
         params.put("content3","还撸么？");
         params.put("headerText4","Firefly");
         params.put("content4","你们撸吧，我先不撸了。");
+
+        User user = (User) request.getAttribute(Constants.USER_INFO);
+        if (user != null) {
+            params.put("userNickName", user.nickName);
+        }
+
         model.addAllObjects(params);
         model.setViewName("index");
         return model;

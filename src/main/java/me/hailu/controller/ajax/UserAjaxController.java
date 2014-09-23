@@ -5,10 +5,14 @@ import me.hailu.user.AccountUtils;
 import me.hailu.user.User;
 import me.hailu.user.UserDao;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,8 +42,10 @@ public class UserAjaxController {
             if (!user.passWord.equals(encodedPassword)) {
                 return Response.status(500).info("密码不正确").build();
             }
-            response.addCookie(new Cookie("lumer", user.get_id().toString()));
-            return Response.status(200).info("登录成功").build();
+            Map result = new HashMap<String, String>();
+            result.put("nickname", user.nickName);
+            result.put("cookie", user.get_id().toString());
+            return Response.status(200).info("登录成功").entity(result).build();
         }
     }
 
@@ -57,6 +63,7 @@ public class UserAjaxController {
             return Response.status(500).info("用户名已存在").build();
         }
         String encodedPassword = AccountUtils.md5Encode(password);
+        user = new User();
         user.userName = userName;
         user.passWord = encodedPassword;
         user.nickName = nickName;
