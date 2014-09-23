@@ -73,6 +73,6 @@ public class UserAjaxController {
         result.put("nickname", user.nickName);
         result.put("cookie", user.get_id().toString());
 
-        return Response.status(200).info("注册成功").build();
+        return Response.status(200).info("注册成功").entity(result).build();
     }
 }
