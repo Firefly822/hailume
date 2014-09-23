@@ -69,6 +69,10 @@ public class UserAjaxController {
         user.nickName = nickName;
         userDao.save(user);
 
+        Map result = new HashMap<String, String>();
+        result.put("nickname", user.nickName);
+        result.put("cookie", user.get_id().toString());
+
         return Response.status(200).info("注册成功").build();
     }
 }

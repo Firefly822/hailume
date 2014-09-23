@@ -63,6 +63,7 @@ jQuery(document).ready(function($) {
             success: function(json) {
                 if (json.code == 200) {
                     $('#navLogin').html($('#inputNickname').val());
+                    document.cookie="lumer="+json.entity.cookie;
                 } else {
                     alert(json.info);
                 }
