@@ -67,7 +67,12 @@ public class WebController {
         modelAndView.setViewName("page");
         return modelAndView;
     }
-
+    @RequestMapping(value = "/publish",method = RequestMethod.GET)
+    public ModelAndView publish(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("publish");
+        return modelAndView;
+    }
 //    @Override
 //    public ModelAndView handleRequest(HttpServletRequest httpServletRequest,
 //                                      HttpServletResponse httpServletResponse) throws Exception {
