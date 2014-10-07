@@ -4,7 +4,9 @@ import me.hailu.http.Constants;
 import me.hailu.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -43,29 +45,34 @@ public class IndexController {
         return model;
     }
 
-//    @RequestMapping(value = "/n", method = RequestMethod.GET)
-//    public ModelAndView newpage() {
-//        ModelAndView model = new ModelAndView();
-//        Map<String, Object> params = new HashMap<String, Object>();
-//        params.put("newvalue", "http://image.qtv.com.cn/0/11/53/57/11535780_842371.jpg");
-//        model.addAllObjects(params);
-//        model.setViewName("newpage");
-//        return model;
-//    }
-//
-//    @RequestMapping(value = "/newpage", method = RequestMethod.GET)
-//    public String helloworld(Model model) {
-//        model.addAttribute("newvalue", "http://image.qtv.com.cn/0/11/53/57/11535780_842371.jpg");
-//        return "newpage";
-//    }
-//
-//    @RequestMapping(value = "/page",method = RequestMethod.GET)
-//    public ModelAndView page(){
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("page");
-//        return modelAndView;
-//    }
+    @RequestMapping(value = "/n", method = RequestMethod.GET)
+    public ModelAndView newpage() {
+        ModelAndView model = new ModelAndView();
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("newvalue", "http://image.qtv.com.cn/0/11/53/57/11535780_842371.jpg");
+        model.addAllObjects(params);
+        model.setViewName("newpage");
+        return model;
+    }
 
+    @RequestMapping(value = "/newpage", method = RequestMethod.GET)
+    public String helloworld(Model model) {
+        model.addAttribute("newvalue", "http://image.qtv.com.cn/0/11/53/57/11535780_842371.jpg");
+        return "newpage";
+    }
+
+    @RequestMapping(value = "/page",method = RequestMethod.GET)
+    public ModelAndView page(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("page");
+        return modelAndView;
+    }
+    @RequestMapping(value = "/publish",method = RequestMethod.GET)
+    public ModelAndView publish(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("publish");
+        return modelAndView;
+    }
 //    @Override
 //    public ModelAndView handleRequest(HttpServletRequest httpServletRequest,
 //                                      HttpServletResponse httpServletResponse) throws Exception {
