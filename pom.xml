@@ -107,6 +107,12 @@
             <version>6.7</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>sdk</artifactId>
+            <version>6.1.0</version>
+        </dependency>
     </dependencies>
     
 </project>

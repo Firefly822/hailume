@@ -45,17 +45,24 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><i class="fa fa-recycle"></i> <span>还撸</span>么.</a>
+            <a class="navbar-brand" href="javascript:;"><i class="fa fa-recycle"></i> <span>还撸</span>么.</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-top">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="/">首页</a></li>
-                <li><a href="/page">关于我们</a></li>
+                <li class="active"><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">关于我们</a></li>
 
                 <c:if test="${userNickName != null && fn:length(userNickName) > 0}">
-                <li><a href="javascript:;">${userNickName}</a></li>
+                <li class="dropdown" id="userIcon">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="navLogout">${userNickName}</a>
+                    <div class="dropdown-menu" style="padding:17px;">
+                        <form>
+                            <button type="button" style="margin-bottom: 5px;" id="btnLogout" class="btn">退出登录</button>
+                        </form>
+                    </div>
+                </li>
                 </c:if>
                 <c:if test="${userNickName == null || fn:length(userNickName) == 0}">
                 <li class="dropdown" id="userIcon">
@@ -103,19 +110,19 @@
                             <div class="carousel slide" id="myCarousel">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
-                                    <a class="active item" data-slide-number="0" href="#" target="_blank">
+                                    <a class="active item" data-slide-number="0" href="javascript:;">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510102999502.jpg">
                                     </a>
 
-                                    <a class="item" data-slide-number="1" href="#" target="_blank">
+                                    <a class="item" data-slide-number="1" href="javascript:;">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103176146.jpg">
                                     </a>
 
-                                    <a class="item" data-slide-number="2" href="#" target="_blank">
+                                    <a class="item" data-slide-number="2" href="javascript:;">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103307379.jpg">
                                     </a>
 
-                                    <a class="item" data-slide-number="3" href="#" target="_blank">
+                                    <a class="item" data-slide-number="3" href="javascript:;">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/201407251010348231113.jpg">
                                     </a>
 
