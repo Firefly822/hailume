@@ -18,7 +18,6 @@
             margin-left: -40px;
             margin-top:20px;
         }    </style>
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         window.alert = function(){};
@@ -91,114 +90,12 @@
     </div><!-- /.navbar-collapse -->
 </nav>	<script type="text/javascript">
 </script>
-<!-- 画廊 -->
-<div class="container">
-    <div id="main_area">
-        <!-- Slider -->
-        <div class="row">
-            <div class="col-xs-12" id="slider">
-                <!-- Top part of the slider -->
-                <div class="row">
-                    <div class="col-sm-8" id="carousel-bounding-box">
-                        <div class="carousel slide" id="myCarousel">
-                            <!-- Carousel items -->
-                            <div class="carousel-inner">
-                                <div class="active item" data-slide-number="0">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510102999502.jpg"></div>
+    <button id="btn_load" type="button" class="btn btn-default">加载</button>
+    <h1 id="article_title"></h1>
+    <div id="article_contet"></div>
+</div>
 
-                                <div class="item" data-slide-number="1">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103176146.jpg"></div>
-
-                                <div class="item" data-slide-number="2">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103307379.jpg"></div>
-
-                                <div class="item" data-slide-number="3">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/201407251010348231113.jpg"></div>
-
-
-                            </div><!-- Carousel nav -->
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4" id="carousel-text"></div>
-
-                    <div id="slide-content" style="display: none;">
-                        <div id="slide-content-0">
-                            <h2>${headerText1}</h2>
-                            <p>${content1}</p>
-                        </div>
-
-                        <div id="slide-content-1">
-                            <h2>${headerText2}</h2>
-                            <p>${content2}</p>
-                        </div>
-
-                        <div id="slide-content-2">
-                            <h2>${headerText3}</h2>
-                            <p>${content3}</p>
-                        </div>
-
-                        <div id="slide-content-3">
-                            <h2>${headerText4}</h2>
-                            <p>${content4}</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div><!--/Slider-->
-
-        <div class="row hidden-xs" id="slider-thumbs">
-            <!-- Bottom switcher of slider -->
-            <ul class="hide-bullets">
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-0"><img src="http://placehold.it/170x100&text=one"></a>
-                </li>
-
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/170x100&text=two"></a>
-                </li>
-
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=three"></a>
-                </li>
-
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-3"><img src="http://placehold.it/170x100&text=four"></a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</div>	<script type="text/javascript">
-    jQuery(document).ready(function($) {
-
-        $('#myCarousel').carousel({
-            interval: 5000
-        });
-
-        $('#carousel-text').html($('#slide-content-0').html());
-
-        //Handles the carousel thumbnails
-        $('[id^=carousel-selector-]').click( function(){
-            var id_selector = $(this).attr("id");
-            var id = id_selector.substr(id_selector.length -1);
-            var id = parseInt(id);
-            $('#myCarousel').carousel(id);
-        });
-
-
-        // When the carousel slides, auto update the text
-        $('#myCarousel').on('slid.bs.carousel', function (e) {
-            var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-        });
-    });	</script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/app/js/page.js"></script>
 </body>
 </html>

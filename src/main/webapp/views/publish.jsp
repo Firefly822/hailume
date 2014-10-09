@@ -10,48 +10,49 @@
 <head>
     <title>发表文章页面</title>
     <style type="text/css">
-        div#header {background: #1e1eff;}
-        div#menu {background: #f8fdff;width: 600px; height: 500px ; float: left;}
-        div#content {background-color:#EEEEEE; height:800px ; width:600px; float:left;}
-        div#footer {background-color:#99bbbb; clear:both; text-align:center;}
+        div#content {height:800px ;width: 60%;margin: 30px; float:left;}
+        div.input-group {width: 300px;margin: 30px;}
+
         h1 {margin-bottom:0;}
         h2 {margin-bottom:0; font-size:14px;}
         ul {margin:0;}
         li {list-style:none;}
     </style>
-
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/app/css/publish.css" rel="stylesheet">
 
 </head>
 <body>
-    <div id="header">发表文章页面</div>
-    <div id="menu">
-        <h1>菜单</h1>
-        <ul>
-            <li>编辑文章</li>
-            <li>已发表文章</li>
-        </ul>
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item active" href="#">Home</a>
+                <a class="blog-nav-item" href="#">New features</a>
+                <a class="blog-nav-item" href="#">Press</a>
+                <a class="blog-nav-item" href="#">New hires</a>
+                <a class="blog-nav-item" href="#">About</a>
+            </nav>
+        </div>
     </div>
     <div id="content">
-        <form>
-            题目:
-            <input type="text" name="题目" />
-            <br />
-            列别:
-            <input type="text" name="类别" />
-        </form>
-        <h3>编辑文章</h3>
+
+        <div class="input-group">
+            <span class="input-group-addon">题目</span>
+            <input id="et_title" type="text" class="form-control" placeholder="请输入一个题目">
+        </div>
+
         <!-- 百度编辑器 -->
-        <script id="container" name="content" type="text/plain" style="width:600px;height:200px;">
-            编辑文章
+        <script id="container" name="content" type="text/plain" style="width:100%;height:50%;">
         </script>
-        <button id="publish">发表</button>
-        <h4>预览</h4>
-        <p id="pre">empty</p>
-        <div id="detaildiv"></div>
+        <div class="btn-group">
+            <button id="btn_confirm" type="button" class="btn btn-default">发表</button>
+            <button id="btn_cancel" type="button" class="btn btn-default">取消</button>
+        </div>
     </div>
-    <div id="footer">end</div>
 
     <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+
     <script src="/static/app/js/publish_page.js"></script>
     <!-- 样式文件 -->
     <link rel="stylesheet" href="/static/umeditor/themes/default/css/umeditor.css">
