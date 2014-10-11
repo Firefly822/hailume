@@ -6,12 +6,12 @@ jQuery(document).ready(function(){
         type: "POST",
         url: "/ajax/article/loadpage",
         data: {
-            title: "firefly"
+            title: "firefly1"
         },
         success: function (json) {
             if (json.code == 200) {
-                $('#article_title').text(json.entity.title);
-                $('#article_content').html(json.entity.content);
+                $('#post_title').text(json.entity.title);
+                $('#post_content').html(json.entity.content);
             }
         },
         error: function () {
