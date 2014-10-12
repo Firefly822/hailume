@@ -43,6 +43,10 @@ public abstract class GenericDAO<T extends Model> {
         return (Class) type.getActualTypeArguments()[0];
     }
 
+    public T loadById(int id) {
+        return collection.findOne("{id:#}", id).as(clazz);
+    }
+
     public T loadByObjectId(String id) {
         ObjectId _id = null;
         try {

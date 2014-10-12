@@ -56,7 +56,7 @@
     <!-- 样式文件 -->
     <link rel="stylesheet" href="/static/umeditor/themes/default/css/umeditor.css">
     <!-- 引用jquery -->
-    <script src="/static/umeditor/third-party/jquery.min.js"></script>
+    <%--<script src="/static/umeditor/third-party/jquery.min.js"></script>--%>
     <!-- 配置文件 -->
     <script type="text/javascript" src="/static/umeditor/umeditor.config.js"></script>
     <!-- 编辑器源码文件 -->

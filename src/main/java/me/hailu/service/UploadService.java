@@ -1,5 +1,7 @@
 package me.hailu.service;
 
+import java.io.InputStream;
+
 /**
  * Created with IntelliJ IDEA.
  * User: liming_liu
@@ -8,4 +10,6 @@ package me.hailu.service;
  * To change this template use File | Settings | File Templates.
  */
 public interface UploadService {
+
+    String uploadStream(InputStream inputStream, String key);
 }
