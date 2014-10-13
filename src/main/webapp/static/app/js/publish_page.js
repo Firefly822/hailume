@@ -21,4 +21,15 @@ jQuery(document).ready(function(){
             }
         })
     });
+
+    <!-- 实例化编辑器代码 -->
+    $(function(){
+        var ue = UM.getEditor('container', {
+            /* 传入配置参数,可配参数列表看umeditor.config.js */
+            toolbars: [
+                ['fullscreen', 'source', 'undo', 'redo'],
+                ['bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc']
+            ]
+        });
+    });
 });

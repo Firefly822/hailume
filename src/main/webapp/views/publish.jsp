@@ -6,56 +6,68 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
-    <title>发表文章页面</title>
-    <style type="text/css">
-        div#content {height:800px ;width: 60%;margin: 30px; float:left;}
-        div.input-group {width: 300px;margin: 30px;}
+    <title>发表文章 —— 还撸么</title>
 
-        h1 {margin-bottom:0;}
-        h2 {margin-bottom:0; font-size:14px;}
-        ul {margin:0;}
-        li {list-style:none;}
-    </style>
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="/static/app/css/header.css" rel="stylesheet">
     <link href="/static/app/css/publish.css" rel="stylesheet">
-
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="/static/umeditor/themes/default/css/umeditor.css">
 </head>
 <body>
-    <div class="blog-masthead">
+    <c:import url="header.jsp"></c:import>
+
+    <div id="featured">
         <div class="container">
-            <nav class="blog-nav">
-                <a class="blog-nav-item active" href="#">Home</a>
-                <a class="blog-nav-item" href="#">New features</a>
-                <a class="blog-nav-item" href="#">Press</a>
-                <a class="blog-nav-item" href="#">New hires</a>
-                <a class="blog-nav-item" href="#">About</a>
-            </nav>
-        </div>
-    </div>
-    <div id="content">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>标题：</th>
+                        <td><input id="edit-title" type="text" style="width: 500px"></td>
+                    </tr>
+                    <tr>
+                        <th>摘要：</th>
+                        <td><textarea id="edit-brief" type="text" rows="3" style="width: 700px"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>内容：</th>
+                        <td>
+                            <!-- 百度编辑器 -->
+                            <script id="container" name="content" type="text/plain" style="width:100%;height:50%;">
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><button id="submit" type="button">发表</button></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div class="input-group">
-            <span class="input-group-addon">题目</span>
-            <input id="et_title" type="text" class="form-control" placeholder="请输入一个题目">
-        </div>
-
-        <!-- 百度编辑器 -->
-        <script id="container" name="content" type="text/plain" style="width:100%;height:50%;">
-        </script>
-        <div class="btn-group">
-            <button id="btn_confirm" type="button" class="btn btn-default">发表</button>
-            <button id="btn_cancel" type="button" class="btn btn-default">取消</button>
         </div>
     </div>
 
     <script src="/static/js/jquery.js"></script>
     <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/masonry.pkgd.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/gmap3.min.js"></script>
+    <script src="/static/js/jquery.isotope.min.js"></script>
+    <script src="/static/js/jquery.easing.js"></script>
+    <script src="/static/js/script.js"></script>
 
     <script src="/static/app/js/publish_page.js"></script>
-    <!-- 样式文件 -->
-    <link rel="stylesheet" href="/static/umeditor/themes/default/css/umeditor.css">
+    <script src="/static/app/js/header.js"></script>
     <!-- 引用jquery -->
     <%--<script src="/static/umeditor/third-party/jquery.min.js"></script>--%>
     <!-- 配置文件 -->
@@ -64,17 +76,5 @@
     <script type="text/javascript" src="/static/umeditor/umeditor.js"></script>
     <!-- 语言包文件 -->
     <script type="text/javascript" src="/static/umeditor/lang/zh-cn/zh-cn.js"></script>
-    <!-- 实例化编辑器代码 -->
-    <script type="text/javascript">
-        $(function(){
-            var ue = UM.getEditor('container', {
-                /* 传入配置参数,可配参数列表看umeditor.config.js */
-                toolbars: [
-                    ['fullscreen', 'source', 'undo', 'redo'],
-                    ['bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc']
-                ]
-            });
-        });
-    </script>
 </body>
 </html>
