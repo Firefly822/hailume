@@ -9,196 +9,158 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Carousel Extended - 3.2.0 Compatible - Bootsnipp.com</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <style type="text/css">
-        .hide-bullets {
-            list-style:none;
-            margin-left: -40px;
-            margin-top:20px;
-        }    </style>
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
-            else $('head > link').filter(':first').replaceWith(defaultCSS);
-        }
-        $( document ).ready(function() {
-            var iframe_height = parseInt($('html').height());
-            window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
-        });
-    </script>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Blog Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/app/css/page.css" rel="stylesheet">
 </head>
 <body>
-<!-- 导航栏 -->
-<nav class="navbar navbar-default" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/index">还撸么</a>
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item active" href="#">Home</a>
+            <a class="blog-nav-item" href="#">New features</a>
+            <a class="blog-nav-item" href="#">Press</a>
+            <a class="blog-nav-item" href="#">New hires</a>
+            <a class="blog-nav-item" href="#">About</a>
+        </nav>
     </div>
+</div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">One more separated link</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="col-sm-3 col-md-3">
-            <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="q">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-</nav>	<script type="text/javascript">
-</script>
-<!-- 画廊 -->
 <div class="container">
-    <div id="main_area">
-        <!-- Slider -->
-        <div class="row">
-            <div class="col-xs-12" id="slider">
-                <!-- Top part of the slider -->
-                <div class="row">
-                    <div class="col-sm-8" id="carousel-bounding-box">
-                        <div class="carousel slide" id="myCarousel">
-                            <!-- Carousel items -->
-                            <div class="carousel-inner">
-                                <div class="active item" data-slide-number="0">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510102999502.jpg"></div>
 
-                                <div class="item" data-slide-number="1">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103176146.jpg"></div>
-
-                                <div class="item" data-slide-number="2">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103307379.jpg"></div>
-
-                                <div class="item" data-slide-number="3">
-                                    <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/201407251010348231113.jpg"></div>
-
-
-                            </div><!-- Carousel nav -->
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4" id="carousel-text"></div>
-
-                    <div id="slide-content" style="display: none;">
-                        <div id="slide-content-0">
-                            <h2>${headerText1}</h2>
-                            <p>${content1}</p>
-                        </div>
-
-                        <div id="slide-content-1">
-                            <h2>${headerText2}</h2>
-                            <p>${content2}</p>
-                        </div>
-
-                        <div id="slide-content-2">
-                            <h2>${headerText3}</h2>
-                            <p>${content3}</p>
-                        </div>
-
-                        <div id="slide-content-3">
-                            <h2>${headerText4}</h2>
-                            <p>${content4}</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div><!--/Slider-->
-
-        <div class="row hidden-xs" id="slider-thumbs">
-            <!-- Bottom switcher of slider -->
-            <ul class="hide-bullets">
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-0"><img src="http://placehold.it/170x100&text=one"></a>
-                </li>
-
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/170x100&text=two"></a>
-                </li>
-
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=three"></a>
-                </li>
-
-                <li class="col-sm-2">
-                    <a class="thumbnail" id="carousel-selector-3"><img src="http://placehold.it/170x100&text=four"></a>
-                </li>
-
-            </ul>
-        </div>
+    <div class="blog-header">
+        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
     </div>
-</div>	<script type="text/javascript">
-    jQuery(document).ready(function($) {
 
-        $('#myCarousel').carousel({
-            interval: 5000
-        });
+    <div class="row">
 
-        $('#carousel-text').html($('#slide-content-0').html());
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+                <h2 id="post_title" class="blog-post-title">Sample blog post</h2>
+                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                <div id="post_content"></div>
+            </div>
+            <%--<div class="blog-post">
+                <h2 class="blog-post-title">Sample blog post</h2>
+                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
-        //Handles the carousel thumbnails
-        $('[id^=carousel-selector-]').click( function(){
-            var id_selector = $(this).attr("id");
-            var id = id_selector.substr(id_selector.length -1);
-            var id = parseInt(id);
-            $('#myCarousel').carousel(id);
-        });
+                <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+                <hr>
+                <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                <blockquote>
+                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </blockquote>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <h2>Heading</h2>
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <h3>Sub-heading</h3>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <pre><code>Example code block</code></pre>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                <h3>Sub-heading</h3>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                <ol>
+                    <li>Vestibulum id ligula porta felis euismod semper.</li>
+                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                    <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                </ol>
+                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            </div><!-- /.blog-post -->
 
+            <div class="blog-post">
+                <h2 class="blog-post-title">Another blog post</h2>
+                <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
 
-        // When the carousel slides, auto update the text
-        $('#myCarousel').on('slid.bs.carousel', function (e) {
-            var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-        });
-    });	</script>
+                <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                <blockquote>
+                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </blockquote>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            </div><!-- /.blog-post -->
+
+            <div class="blog-post">
+                <h2 class="blog-post-title">New feature</h2>
+                <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
+
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            </div><!-- /.blog-post -->--%>
+
+            <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-inset">
+                <h4>About</h4>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            </div>
+            <div class="sidebar-module">
+                <h4>Archives</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a></li>
+                    <li><a href="#">February 2014</a></li>
+                    <li><a href="#">January 2014</a></li>
+                    <li><a href="#">December 2013</a></li>
+                    <li><a href="#">November 2013</a></li>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                </ol>
+            </div>
+            <div class="sidebar-module">
+                <h4>Elsewhere</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ol>
+            </div>
+        </div><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+</div><!-- /.container -->
+
+<div class="blog-footer">
+    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
+</div>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/app/js/page.js"></script>
 </body>
 </html>
