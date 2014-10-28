@@ -2,12 +2,12 @@ package me.hailu.controller.ajax;
 
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
+import me.hailu.http.Constants;
 import me.hailu.http.Response;
+import me.hailu.user.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
@@ -20,18 +20,24 @@ import java.util.Map;
 @RequestMapping(value = "/ajax/article")
 public class ArticleAjaxController {
 
+    @Autowired
+    private javax.servlet.http.HttpServletRequest request;
+
     ArticleDao dao = new ArticleDao();
 
     @ResponseBody
     @RequestMapping(value = "/publish", method = RequestMethod.POST)
-    public Response publish(
-            @RequestParam(value = "title", required = true) String title,
-            @RequestParam(value = "content", required = true) String content,
-            HttpServletResponse response){
-        Article article = new Article();
-        article.title = title;
-        article.content = content;
+    public Response publish(@RequestBody Article article){
+
+        User user = (User) request.getAttribute(Constants.USER_INFO);
+        if (user == null) {
+            return Response.status(403).info("发表文章需先登录").build();
+        }
+
+        article.authorId = user.id;
+        article.authorName = user.nickName;
         dao.save(article);
+
         return Response.status(200).info("发表成功").build();
     }
 

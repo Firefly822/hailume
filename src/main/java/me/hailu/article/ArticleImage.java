@@ -1,5 +1,6 @@
 package me.hailu.article;
 
+import lombok.Data;
 import me.hailu.mongo.Model;
 
 /**
@@ -9,6 +10,7 @@ import me.hailu.mongo.Model;
  * Time: 下午4:59
  * To change this template use File | Settings | File Templates.
  */
+@Data
 public class ArticleImage extends Model {
 
     public String url;

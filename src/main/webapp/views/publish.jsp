@@ -19,6 +19,11 @@
     <link href="/static/css/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
     <link href="/static/css/responsive.css" rel="stylesheet">
+
+    <link href="/static/css/jquery-ui.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-tokenfield.min.css" rel="stylesheet">
+    <link href="/static/css/fileinput.min.css" rel="stylesheet">
+
     <link href="/static/app/css/header.css" rel="stylesheet">
     <link href="/static/app/css/publish.css" rel="stylesheet">
     <!-- 样式文件 -->
@@ -36,8 +41,21 @@
                         <td><input id="edit-title" type="text" style="width: 500px"></td>
                     </tr>
                     <tr>
+                        <th>标签：</th>
+                        <td><input type="text" class="form-control" id="tokenfield" placeholder="输入标签并按回车"/></td>
+                    </tr>
+                    <tr>
                         <th>摘要：</th>
-                        <td><textarea id="edit-brief" type="text" rows="3" style="width: 700px"></textarea></td>
+                        <td><textarea id="edit-brief" type="text" rows="3" style="width: 100%;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>封面：</th>
+                        <td>
+                            <form id="face-pic" method="POST" action="/ajax/upload/file" enctype="multipart/form-data" target='frameFile'>
+                                <input id="input-id" name="file" type="file" class="file J-cover" data-preview-file-type="text" >
+                                <%--<input id="submit-face" value="upload" type="button">--%>
+                            </form>
+                        </td>
                     </tr>
                     <tr>
                         <th>内容：</th>
@@ -56,15 +74,20 @@
 
         </div>
     </div>
+    <iframe id='frameFile' name='frameFile' style='display: none;'></iframe>
 
     <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery-ui.js"></script>
     <script src="/static/js/bootstrap.js"></script>
     <script src="/static/js/masonry.pkgd.min.js"></script>
     <script src="/static/js/imagesloaded.pkgd.min.js"></script>
     <script src="/static/js/gmap3.min.js"></script>
     <script src="/static/js/jquery.isotope.min.js"></script>
     <script src="/static/js/jquery.easing.js"></script>
+    <script src="/static/js/jquery.form.js"></script>
     <script src="/static/js/script.js"></script>
+    <script src="/static/js/bootstrap-tokenfield.js"></script>
+    <script src="/static/js/fileinput.min.js"></script>
 
     <script src="/static/app/js/publish_page.js"></script>
     <script src="/static/app/js/header.js"></script>

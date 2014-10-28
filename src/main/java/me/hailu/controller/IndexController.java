@@ -1,5 +1,7 @@
 package me.hailu.controller;
 
+import me.hailu.article.Article;
+import me.hailu.article.ArticleDao;
 import me.hailu.http.Constants;
 import me.hailu.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,6 +20,8 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/")
 public class IndexController {
+
+    ArticleDao articleDao = new ArticleDao();
 
     @Autowired
     private javax.servlet.http.HttpServletRequest request;
@@ -38,6 +43,9 @@ public class IndexController {
         if (user != null) {
             params.put("userNickName", user.nickName);
         }
+
+        List<Article> articles = articleDao.find("");
+        params.put("articles", articles);
 
         model.addAllObjects(params);
         model.setViewName("index");

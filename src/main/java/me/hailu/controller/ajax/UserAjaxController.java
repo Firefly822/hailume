@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,8 +30,7 @@ public class UserAjaxController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Response login(
             @RequestParam(value = "username", required = true) String userName,
-            @RequestParam(value = "password", required = true) String password,
-            HttpServletResponse response) {
+            @RequestParam(value = "password", required = true) String password) {
 
         User user = userDao.loadByUserName(userName);
         if (user == null) {

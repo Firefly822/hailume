@@ -1,6 +1,7 @@
 package me.hailu.mongo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.bson.types.ObjectId;
@@ -16,6 +17,7 @@ import java.util.Date;
  * Time: 下午12:12
  * To change this template use File | Settings | File Templates.
  */
+@Data
 public class Model implements Serializable {
 
     private static final long serialVersionUID = 1L;

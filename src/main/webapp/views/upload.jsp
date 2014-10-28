@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form method="POST" action="/ajax/upload/file" enctype="multipart/form-data">
+<form method="POST" modelAttribute="file" action="/ajax/upload/file" enctype="multipart/form-data">
     File to upload: <input type="file" name="file"><br />
     Name: <input type="text" name="name"><br /> <br />
     <input type="submit" value="Upload"> Press here to upload the file!
@@ -25,6 +25,11 @@
     <%--Name2: <input type="text" name="name"><br /> <br />--%>
     <%--<input type="submit" value="Upload"> Press here to upload the file!--%>
 <%--</form>--%>
+<form method="POST" modelAttribute="testAhahahehe" action="/ajax/upload/file">
+    <input name="hahaha" type="text">
+    <input name="hehehe" type="text">
+    <input type="submit" value="upload">
+</form>
 
 </body>
 </html>

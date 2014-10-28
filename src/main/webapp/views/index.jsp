@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: liming_liu
-  Date: 14-9-1
-  Time: 下午3:02
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -109,239 +102,39 @@
 <!-- end:featured -->
 
 <!-- begin:content -->
-<%--<section id="content">--%>
-    <%--<div class="container">--%>
-        <%--<div class="row container-post">--%>
-            <%--<!-- begin:article -->--%>
-            <%--<div class="col-md-4 col-sm-6">--%>
-                <%--<div class="post-container">--%>
-                    <%--<div class="post-content">--%>
-                        <%--<div class="heading-title heading-small">--%>
-                            <%--<h2><a href="#">This is sample post text</a></h2>--%>
-                        <%--</div>--%>
-                        <%--<div class="post-meta">--%>
-                            <%--<span>By <a href="#" title="Posts by admin" rel="author">Admin</a></span>--%>
-                            <%--<span>On September 11, 2014</span>--%>
-                            <%--<span>In <a href="#">Story</a></span>--%>
-                        <%--</div>--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod--%>
-                            <%--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,--%>
-                            <%--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo--%>
-                            <%--consequat...</p>--%>
-                        <%--<div class="post-link">--%>
-                            <%--<a href="#"><span>Read more</span></a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- break -->--%>
-            <%--<div class="col-md-4 col-sm-6">--%>
-                <%--<div class="post-container">--%>
-                    <%--<div class="post-content no-padding">--%>
-                        <%--<img src="/static/img/img01.jpg" alt="danish personal blog template">--%>
-                    <%--</div>--%>
-                    <%--<div class="post-content">--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod--%>
-                            <%--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- break -->--%>
-            <%--<div class="col-md-4 col-sm-6">--%>
-                <%--<div class="post-container">--%>
-                    <%--<div class="post-content">--%>
-                        <%--<img src="/static/img/img02.jpg" alt="danish personal blog template">--%>
-                        <%--<div class="heading-title heading-small">--%>
-                            <%--<h2><a href="#">This is sample post text with featured image</a></h2>--%>
-                        <%--</div>--%>
-                        <%--<div class="post-meta">--%>
-                            <%--<span>By <a href="#" title="Posts by admin" rel="author">Admin</a></span>--%>
-                            <%--<span>On September 11, 2014</span>--%>
-                            <%--<span>In <a href="#">Story</a></span>--%>
-                        <%--</div>--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>--%>
-                        <%--<div class="post-link">--%>
-                            <%--<a href="#"><span>Read more</span></a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- break -->--%>
-            <%--<div class="col-md-4 col-sm-6">--%>
-                <%--<div class="post-container">--%>
-                    <%--<div class="post-content">--%>
-                        <%--<blockquote>--%>
-                            <%--<p>Dikehidupan manusia itu memang banyak usaha yang tidak membuahkan hasil. Usaha mendapatkan cintamu misalnya.. </p>--%>
-                            <%--<small>Bardiman</small>--%>
-                        <%--</blockquote>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- break -->--%>
-            <%--<div class="col-md-4 col-sm-6">--%>
-                <%--<div class="post-container">--%>
-                    <%--<div class="post-content">--%>
-                        <%--<img src="/static/img/img04.jpg" alt="danish personal blog template">--%>
-                        <%--<p>This is sample post image caption</p>--%>
-                        <%--<div class="post-link">--%>
-                            <%--<a href="#"><span>Read more</span></a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- break -->--%>
-            <%--<div class="col-md-4 col-sm-6">--%>
-                <%--<div class="post-container">--%>
-                    <%--<div class="post-content">--%>
-                        <%--<div class="post-meta">--%>
-                            <%--<span>By <a href="#" title="Posts by admin" rel="author">Admin</a></span>--%>
-                            <%--<span>On September 11, 2014</span>--%>
-                            <%--<span>In <a href="#">Story</a></span>--%>
-                        <%--</div>--%>
-                        <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod--%>
-                            <%--tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,--%>
-                            <%--quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo--%>
-                            <%--consequat...</p>--%>
-                        <%--<div class="post-link">--%>
-                            <%--<a href="#"><span>Read more</span></a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- break -->--%>
-        <%--</div>--%>
-        <%--<!-- end:article -->--%>
+<section id="content">
+    <div class="container">
+        <!-- begin:article -->
+        <div class="row container-post">
+            <c:forEach items="${articles}" var="article">
+                <div class="col-md-4 col-sm-6">
+                    <div class="post-container">
+                        <div class="post-content">
+                            <a href="/a/${article.id}" target="_blank">
+                                <img src="${article.image.url}" alt="${article.image.description}">
+                            </a>
+                            <div class="heading-title heading-small">
+                                <h2><a href="/a/${article.id}" target="_blank">${article.title}</a></h2>
+                            </div>
+                            <div class="post-meta">
+                                <span><a href="javascript:;"rel="author">${article.authorName}</a></span>
+                                <span>编辑于 <s:date name="${article.addTime}" format="yyyy-MM-dd"/></span>
+                            </div>
+                            <p>${article.brief}</p>
+                            <div class="post-link">
+                                <a href="/a/${article.id}" target="_blank"><span>阅读全文</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- break -->
+            </c:forEach>
+        </div>
+        <!-- end:article -->
 
-    <%--</div>--%>
-<%--</section>--%>
-<%--<!-- end:content -->--%>
-
-<%--<!-- begin:portfolio -->--%>
-<%--<section id="portfolio">--%>
-    <%--<ul class="list-unstyled container-portfolio">--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img01.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img02.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img03.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img04.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img05.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img04.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img01.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-        <%--<li>--%>
-            <%--<div class="portfolio-item">--%>
-                <%--<div class="portfolio-img" style="background: url(/static/img/img02.jpg);"></div>--%>
-                <%--<div class="portfolio-caption">--%>
-                    <%--<div class="portfolio-text">--%>
-                        <%--<h3>Portfolio Title /</h3>--%>
-                        <%--<p>Short Description About Portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus.</p>--%>
-                        <%--<a href="#" class="btn btn-info">View &raquo;</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</li>--%>
-    <%--</ul>--%>
-<%--</section>--%>
-<%--<!-- end:portfolio -->--%>
-
-<%--<!-- begin:partner -->--%>
-<%--<section id="partner">--%>
-    <%--<div class="container">--%>
-        <%--<div class="row">--%>
-            <%--<div class="col-md-12">--%>
-                <%--<ul class="list-unstyled brand-img">--%>
-                    <%--<li>--%>
-                        <%--<a href="#"><img src="/static/img/partner01.png"></a>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<a href="#"><img src="/static/img/partner02.png"></a>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<a href="#"><img src="/static/img/partner01.png"></a>--%>
-                    <%--</li>--%>
-                    <%--<li>--%>
-                        <%--<a href="#"><img src="/static/img/partner02.png"></a>--%>
-                    <%--</li>--%>
-                <%--</ul>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</section>--%>
+    </div>
+</section>
+<!-- end:content -->
 
 <section id="copyright">
     <div class="container">

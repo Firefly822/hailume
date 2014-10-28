@@ -1,5 +1,6 @@
 package me.hailu.article;
 
+import lombok.Data;
 import me.hailu.mongo.Model;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * Time: 下午4:39
  * To change this template use File | Settings | File Templates.
  */
+@Data
 public class Article extends Model {
 
     //标题
@@ -19,11 +21,11 @@ public class Article extends Model {
     public String brief;
     //作者id
     public int authorId;
-
-
+    //作者昵称
+    public String authorName;
     //内容
     public String content;
-    //标签
+    //关键字
     public List<String> tags;
     //头图
     public ArticleImage image;
