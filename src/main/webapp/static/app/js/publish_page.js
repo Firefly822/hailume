@@ -20,7 +20,8 @@ jQuery(document).ready(function(){
             }),
             success: function (json) {
                 if (json.code == 200) {
-                    alert(json.info)
+                    alert(json.info);
+                    window.location.href = "/"
                 }
             },
             error: function () {
@@ -49,7 +50,8 @@ jQuery(document).ready(function(){
     })
 
     $("#input-id").fileinput('refresh', {
-        uploadClass: 'btn btn-default J-upload-face'
+        uploadClass: 'btn btn-default J-upload-face',
+        showRemove: false
     });
 //
     $(".J-upload-face").click(function(){

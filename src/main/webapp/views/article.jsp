@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="s" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -36,7 +37,7 @@
             </div>
             <div class="post-meta">
                 <span><em><a href="javascript:;">${article.authorName}</a> 发表</em></span>
-                <span><em>编辑于 <s:date name="${article.addTime}" format="yyyy-MM-dd"/></em></span>
+                <span><em>编辑于 <s:formatDate value="${article.addTime}" type="date" /></em></span>
             </div>
             <div>
                 ${article.content}
