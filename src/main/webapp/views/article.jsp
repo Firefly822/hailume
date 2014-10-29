@@ -20,6 +20,7 @@
     <link href="/static/css/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
     <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="/static/app/css/article.css" rel="stylesheet">
 </head>
 <body>
 <c:import url="header.jsp"></c:import>
