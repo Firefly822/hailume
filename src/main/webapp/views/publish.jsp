@@ -67,7 +67,10 @@
                     </tr>
                     <tr>
                         <th></th>
-                        <td><button id="submit" type="button">发表</button></td>
+                        <td>
+                            <button id="submit" type="button">发表</button>
+                            <button id="preview" type="button">预览</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
