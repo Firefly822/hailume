@@ -2,10 +2,7 @@ package me.hailu.controller;
 
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
-import me.hailu.http.Constants;
-import me.hailu.user.User;
-import me.hailu.user.UserDao;
-import org.springframework.beans.factory.annotation.Autowired;
+import me.hailu.controller.base.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,51 +22,30 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "/")
-public class ArticleController {
-
-    @Autowired
-    private javax.servlet.http.HttpServletRequest request;
+public class ArticleController extends BaseController {
 
     ArticleDao articleDao = new ArticleDao();
-    UserDao userDao = new UserDao();
 
     @RequestMapping(value = "/publish", method = RequestMethod.GET)
     public ModelAndView publish(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("publish");
         Map<String, Object> params = new HashMap<String, Object>();
 
-        User user = (User) request.getAttribute(Constants.USER_INFO);
-        if (user != null) {
-            params.put("userNickName", user.nickName);
-        }
-        modelAndView.addAllObjects(params);
-
-        return modelAndView;
+        return new MVFactory().createMV("publish", params);
     }
 
-    @RequestMapping(value = "/ a/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/a/{id}", method = RequestMethod.GET)
     public ModelAndView showArticle(@PathVariable Integer id) {
-        ModelAndView modelAndView = new ModelAndView();
         Map<String, Object> params = new HashMap<String, Object>();
-
-        User user = (User) request.getAttribute(Constants.USER_INFO);
-        if (user != null) {
-            params.put("user", user);
-        }
 
         Article article = articleDao.loadById(id);
         if (article == null) {
-            modelAndView.setViewName("article");
-            return modelAndView;
+            return new MVFactory().createMV("article", null);
         }
 
         String date = DateFormat.getDateInstance().format(article.addTime);
         params.put("article", article);
         params.put("date", date);
 
-        modelAndView.addAllObjects(params);
-        modelAndView.setViewName("article");
-        return modelAndView;
+        return new MVFactory().createMV("article", params);
     }
 }

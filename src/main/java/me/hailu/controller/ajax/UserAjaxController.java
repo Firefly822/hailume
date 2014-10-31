@@ -1,6 +1,7 @@
 package me.hailu.controller.ajax;
 
-import me.hailu.http.Response;
+import me.hailu.analysis.DailyReportDao;
+import me.hailu.controller.base.Response;
 import me.hailu.user.AccountUtils;
 import me.hailu.user.User;
 import me.hailu.user.UserDao;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +26,7 @@ import java.util.Map;
 @RequestMapping(value = "/ajax/user")
 public class UserAjaxController {
 
+    DailyReportDao dailyReportDao = new DailyReportDao();
     UserDao userDao = new UserDao();
 
     @ResponseBody
@@ -72,5 +75,12 @@ public class UserAjaxController {
         result.put("cookie", user.get_id().toString());
 
         return Response.status(200).info("注册成功").entity(result).build();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/pv", method = RequestMethod.GET)
+    public Response pv() {
+        dailyReportDao.incPv(new Date());
+        return Response.status(200).build();
     }
 }

@@ -1,4 +1,4 @@
-package me.hailu.http;
+package me.hailu.controller.base;
 
 /**
  * Created with IntelliJ IDEA.

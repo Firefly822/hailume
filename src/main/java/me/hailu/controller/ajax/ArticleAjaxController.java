@@ -3,7 +3,7 @@ package me.hailu.controller.ajax;
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
 import me.hailu.http.Constants;
-import me.hailu.http.Response;
+import me.hailu.controller.base.Response;
 import me.hailu.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
