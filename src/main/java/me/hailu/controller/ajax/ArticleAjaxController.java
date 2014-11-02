@@ -2,14 +2,17 @@ package me.hailu.controller.ajax;
 
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
+import me.hailu.controller.base.Response;
 import me.hailu.http.Constants;
-import me.hailu.http.Response;
 import me.hailu.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +30,7 @@ public class ArticleAjaxController {
 
     @ResponseBody
     @RequestMapping(value = "/publish", method = RequestMethod.POST)
-    public Response publish(@RequestBody Article article){
+    public Response publish(@RequestBody Article article) {
 
         User user = (User) request.getAttribute(Constants.USER_INFO);
         if (user == null) {
@@ -39,6 +42,21 @@ public class ArticleAjaxController {
         dao.save(article);
 
         return Response.status(200).info("发表成功").build();
+    }
+
+    @RequestMapping(value = "/preview", method = RequestMethod.POST)
+    public ModelAndView preview(@RequestBody Article article) {
+        ModelAndView model = new ModelAndView();
+        Map<String, Object> params = new HashMap<String, Object>();
+
+        String date = DateFormat.getDateInstance().format(new Date());
+        params.put("article", article);
+        params.put("date", date);
+
+        model.setViewName("article");
+        model.addAllObjects(params);
+
+        return model;
     }
 
     @ResponseBody

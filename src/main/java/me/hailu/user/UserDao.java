@@ -15,12 +15,12 @@ import java.util.List;
 public class UserDao extends GenericDAO<User> {
 
     public User loadByUserName(String userName) {
-        return collection.findOne("{userName:#}", userName).as(User.class);
+        return collection.findOne("{userName:#}", userName).as(clazz);
     }
 
     public List<User> findNickName(String nickName) {
         return Lists.newArrayList(
-                collection.find("{userName:#}", nickName).as(User.class)
+                collection.find("{userName:#}", nickName).as(clazz)
         );
     }
 }

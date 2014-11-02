@@ -12,6 +12,8 @@ jQuery(document).ready(function(){
             if (json.code == 200) {
                 $('#post_title').text(json.entity.title);
                 $('#post_content').html(json.entity.content);
+            } else {
+                alert(json.info);
             }
         },
         error: function () {

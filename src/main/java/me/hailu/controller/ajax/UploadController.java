@@ -1,6 +1,6 @@
 package me.hailu.controller.ajax;
 
-import me.hailu.http.Response;
+import me.hailu.controller.base.Response;
 import me.hailu.service.UploadService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

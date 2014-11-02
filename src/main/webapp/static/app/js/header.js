@@ -80,4 +80,9 @@ jQuery(document).ready(function($) {
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
+
+    $.ajax({
+        type: "GET",
+        url: "/ajax/user/pv"
+    })
 })
