@@ -98,10 +98,10 @@
         },
         callback: function (editor, $w, url, state) {
 
-            if (state == "SUCCESS") {
+            if (state == 200) {
                 //显示图片计数+1
                 Upload.showCount++;
-                var $img = $("<img src='" + editor.options.imagePath + url + "' class='edui-image-pic' />"),
+                var $img = $("<img src='" + url + "' class='edui-image-pic' />"),
                     $item = $("<div class='edui-image-item edui-image-upload-item'><div class='edui-image-close'></div></div>").append($img);
 
                 if ($(".edui-image-upload2", $w).length < 1) {
@@ -141,7 +141,7 @@
         uploadTpl: '<div class="edui-image-upload%%">' +
             '<span class="edui-image-icon"></span>' +
             '<form class="edui-image-form" method="post" enctype="multipart/form-data" target="up">' +
-            '<input style=\"filter: alpha(opacity=0);\" class="edui-image-file" type="file" hidefocus name="upfile" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp"/>' +
+            '<input style=\"filter: alpha(opacity=0);\" class="edui-image-file" type="file" hidefocus name="file" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp"/>' +
             '</form>' +
 
             '</div>',
@@ -183,11 +183,12 @@
 
             return me;
         },
-        uploadComplete: function(r){
+        uploadComplete: function(json){
             var me = this;
             try{
-                var json = eval('('+r+')');
-                Base.callback(me.editor, me.dialog, json.url, json.state);
+                var mJson = $.parseJSON(json);
+//                var json = eval('('+r+')');
+                Base.callback(me.editor, me.dialog, mJson.entity, mJson.code);
             }catch (e){
                 var lang = me.editor.getLang('image');
                 Base.callback(me.editor, me.dialog, '', (lang && lang.uploadError) || 'Error!');
@@ -206,7 +207,7 @@
                 }
 
                 $('<iframe name="up"  style="display: none"></iframe>').insertBefore(me.dialog).on('load', function(){
-                    var r = this.contentWindow.document.body.innerHTML;
+                    var r = this.contentWindow.document.body.innerText;
                     if(r == '')return;
                     me.uploadComplete(r);
                     $(this).unbind('load');
