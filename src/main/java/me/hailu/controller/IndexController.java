@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,12 @@ public class IndexController extends BaseController {
                 articles.remove(article);
             }
         }
-        params.put("prologue", prologue);
+        List<Article> prologues = new ArrayList<Article>();
+        prologues.add(prologue.get(1));
+        prologues.add(prologue.get(2));
+//        prologues.add(prologue.get(3));
+//        prologues.add(prologue.get(4));
+        params.put("prologue", prologues);
         params.put("articles", articles);
 
         return new MVFactory().createMV("index", params);
