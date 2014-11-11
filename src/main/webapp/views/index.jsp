@@ -43,11 +43,11 @@
                             <div class="carousel slide" id="myCarousel">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
-                                    <a class="active item" data-slide-number="0" href="/a/4">
+                                    <a class="active item" data-slide-number="0" href="/a/4" target="_blank">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510102999502.jpg">
                                     </a>
 
-                                    <a class="item" data-slide-number="1" href="/a/3">
+                                    <a class="item" data-slide-number="1" href="/a/3" target="_blank">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103176146.jpg">
                                     </a>
 

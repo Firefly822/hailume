@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by firefly on 2014/9/3.
@@ -52,6 +49,7 @@ public class IndexController extends BaseController {
 //        prologues.add(prologue.get(3));
 //        prologues.add(prologue.get(4));
         params.put("prologue", prologues);
+
         params.put("articles", articles);
 
         return new MVFactory().createMV("index", params);
