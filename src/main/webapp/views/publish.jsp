@@ -61,8 +61,7 @@
                         <th>内容：</th>
                         <td>
                             <!-- 百度编辑器 -->
-                            <script id="container" name="content" type="text/plain" style="width:100%;height:50%;">
-                            </script>
+                            <script id="container" name="content" type="text/plain" style="width:100%;height:50%;"></script>
                         </td>
                     </tr>
                     <tr>
