@@ -43,7 +43,7 @@
                                 <input name="username" style="margin-bottom: 5px;" id="inputUsername" type="text" placeholder="登录名" pattern="^[a-z,A-Z,0-9,_]{6,15}$" data-valid-min="6" title="Choose a username" required=""><br>
                                 <input name="password" style="margin-bottom: 5px;" id="inputpassword" type="password" placeholder="密码" required="">
                                 <input name="verify" style="margin-bottom: 5px;" id="inputVerify" type="password" placeholder="再输一遍密码" required=""><br>
-                                <input name="nickname" style="margin-bottom: 5px;" id="inputNickname" type="text" placeholder="你的大名" required="">
+                                <input name="nickname" style="margin-bottom: 5px;" id="inputNickname" type="text" placeholder="你的大名（昵称）" required="">
                                 <button type="button" style="margin-bottom: 5px;" id="btnRegister" class="btn">注册</button>
                             </form>
                         </div>

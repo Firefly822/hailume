@@ -43,11 +43,11 @@
                             <div class="carousel slide" id="myCarousel">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
-                                    <a class="active item" data-slide-number="0" href="javascript:;">
+                                    <a class="active item" data-slide-number="0" href="/a/4">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510102999502.jpg">
                                     </a>
 
-                                    <a class="item" data-slide-number="1" href="javascript:;">
+                                    <a class="item" data-slide-number="1" href="/a/3">
                                         <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103176146.jpg">
                                     </a>
 
@@ -107,6 +107,31 @@
     <div class="container">
         <!-- begin:article -->
         <div class="row container-post">
+            <c:forEach items="${prologue}" var="article">
+                <div class="col-md-4 col-sm-6">
+                    <div class="post-container">
+                        <div class="post-content">
+                            <c:if test="${article.image != null && fn:length(article.image.url) > 0}">
+                                <a href="/a/${article.id}" target="_blank">
+                                    <img src="${article.image.url}" alt="${article.image.description}">
+                                </a>
+                            </c:if>
+                            <div class="heading-title heading-small">
+                                <h2><a href="/a/${article.id}" target="_blank">${article.title}</a></h2>
+                            </div>
+                            <div class="post-meta">
+                                <span><a href="javascript:;"rel="author">${article.authorName}</a> 发表</span>
+                                <span>编辑于 <s:formatDate value="${article.addTime}" type="date" /></span>
+                            </div>
+                            <p>${article.brief}</p>
+                            <div class="post-link">
+                                <a href="/a/${article.id}" target="_blank"><span>阅读全文</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- break -->
+            </c:forEach>
             <c:forEach items="${articles}" var="article">
                 <div class="col-md-4 col-sm-6">
                     <div class="post-container">

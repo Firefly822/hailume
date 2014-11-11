@@ -33,7 +33,19 @@ public class IndexController extends BaseController {
         params.put("headerText4","Firefly");
         params.put("content4","你们撸吧，我先不撸了。");
 
+        Map<Integer, Article> prologue = new HashMap<Integer, Article>(4);
+
         List<Article> articles = articleDao.find("");
+        for (Article article : articles) {
+            if (article.id == 4) {
+                prologue.put(1, article);
+                articles.remove(article);
+            } else if (article.id == 3) {
+                prologue.put(2, article);
+                articles.remove(article);
+            }
+        }
+        params.put("prologue", prologue);
         params.put("articles", articles);
 
         return new MVFactory().createMV("index", params);
