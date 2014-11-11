@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by firefly on 2014/9/3.
@@ -31,20 +34,24 @@ public class IndexController extends BaseController {
         params.put("headerText4","Firefly");
         params.put("content4","你们撸吧，我先不撸了。");
 
-        List<Article> prologues = new ArrayList<Article>(4);
+        Map<Integer, Article> prologue = new HashMap<Integer, Article>(4);
 
         List<Article> articles = articleDao.find("");
         for (Article article : articles) {
             if (article.id == 4) {
-                prologues.add(0, article);
+                prologue.put(1, article);
                 articles.remove(article);
             } else if (article.id == 3) {
-                prologues.add(1, article);
+                prologue.put(2, article);
                 articles.remove(article);
             }
         }
-
-        params.put("prologue", prologues);
+        List<Article> prologues = new ArrayList<Article>();
+        prologues.add(prologue.get(1));
+        prologues.add(prologue.get(2));
+//        prologues.add(prologue.get(3));
+//        prologues.add(prologue.get(4));
+        params.put("prologue", prologue);
         params.put("articles", articles);
 
         return new MVFactory().createMV("index", params);
