@@ -31,4 +31,6 @@ public class Article extends Model {
     public ArticleImage image;
     //图片信息
     public List<ArticleImage> images;
+    //类型
+    public String type;
 }

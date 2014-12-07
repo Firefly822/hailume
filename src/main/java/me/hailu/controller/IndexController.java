@@ -2,6 +2,7 @@ package me.hailu.controller;
 
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
+import me.hailu.article.ArticleType;
 import me.hailu.controller.base.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,21 +36,11 @@ public class IndexController extends BaseController {
 
 //        Map<Integer, Article> prologue = new HashMap<Integer, Article>(4);
 
-        List<Article> articles = articleDao.find("");
-//        for (Article article : articles) {
-//            if (article.id == 4) {
-//                prologue.put(1, article);
-//                articles.remove(article);
-//            } else if (article.id == 3) {
-//                prologue.put(2, article);
-//                articles.remove(article);
-//            }
-//        }
-//        List<Article> prologues = new ArrayList<Article>();
-//        prologues.add(prologue.get(1));
-//        prologues.add(prologue.get(2));
-//        params.put("prologue", prologue);
+        List<Article> articles = articleDao.findByType(ArticleType.DEFAULT, 9);
+        List<Article> aboutus = articleDao.findByType(ArticleType.ABOUTUS, 4);
+
         params.put("articles", articles);
+        params.put("prologues", aboutus);
 
         return new MVFactory().createMV("index", params);
     }
