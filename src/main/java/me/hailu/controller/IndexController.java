@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by firefly on 2014/9/3.
@@ -38,6 +36,12 @@ public class IndexController extends BaseController {
 
         List<Article> articles = articleDao.findByType(ArticleType.DEFAULT, 9);
         List<Article> aboutus = articleDao.findByType(ArticleType.ABOUTUS, 4);
+        Collections.sort(aboutus, new Comparator<Article>() {
+            @Override
+            public int compare(Article o1, Article o2) {
+                return o1.id - o2.id;
+            }
+        });
 
         params.put("articles", articles);
         params.put("prologues", aboutus);

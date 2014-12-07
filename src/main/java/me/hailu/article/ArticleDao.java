@@ -16,7 +16,7 @@ public class ArticleDao extends GenericDAO<Article>{
 
     public List<Article> findByType(ArticleType type, int count) {
         return Lists.newArrayList(
-                collection.find("{type:#}", type.toString()).limit(count).as(Article.class)
+                collection.find("{type:#}", type.toString()).limit(count).sort("{id:-1}").as(Article.class)
         );
     }
 }
