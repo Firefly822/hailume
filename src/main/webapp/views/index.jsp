@@ -145,11 +145,10 @@
             <li>
                 <div class="portfolio-item">
                     <div class="portfolio-img" style="background: url(${prologue.image.url});"></div>
-                    <div class="portfolio-caption">
+                    <a href="/a/${prologue.id}" class="portfolio-caption">
                         <div class="portfolio-text">
                             <h3>${prologue.title}</h3>
                             <p>${prologue.brief}</p>
-                            <a href="/a/${prologue.id}" class="btn btn-info">阅读全文</a>
                         </div>
                     </div>
                 </div>
