@@ -23,8 +23,8 @@ import java.io.InputStream;
 @Component
 public class UploadServiceImpl implements UploadService {
 
-    private final String ACCESS_KEY = "lOKpSB3REsB_snzLx8FAmpj-r6wWUlNqdnN_MqJA";
-    private final String SECRET_KEY = "vgLJViubyR-gp2NCQodv2YxQTKFV3L6BDlVJfXQW";
+    private final String ACCESS_KEY = "IDon'tKnow";
+    private final String SECRET_KEY = "YouCanGuess";
     private final String BUCKET_NAME = "hailume";
 
     @Override
