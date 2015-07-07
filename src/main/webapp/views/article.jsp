@@ -74,5 +74,12 @@
 <script src="/static/js/jquery.easing.js"></script>
 <script src="/static/js/script.js"></script>
 <script src="/static/app/js/header.js"></script>
+
+<script>
+    <c:if test="${article.image.url != null}">
+    var image = "${article.image.url}";
+    document.getElementById("header").style.backgroundImage = "url("+image+")";
+    </c:if>
+</script>
 </body>
 </html>

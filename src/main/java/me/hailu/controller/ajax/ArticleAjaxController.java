@@ -26,7 +26,7 @@ public class ArticleAjaxController {
     @Autowired
     private javax.servlet.http.HttpServletRequest request;
 
-    ArticleDao dao = new ArticleDao();
+    ArticleDao articleDao = new ArticleDao();
 
     @ResponseBody
     @RequestMapping(value = "/publish", method = RequestMethod.POST)
@@ -35,13 +35,30 @@ public class ArticleAjaxController {
         User user = (User) request.getAttribute(Constants.USER_INFO);
         if (user == null) {
             return Response.status(403).info("发表文章需先登录").build();
+
+        } else if (article.id > 0) {
+            Article originArticle = articleDao.loadById(article.id);
+            if (originArticle.authorId != user.id) {
+                return Response.status(403).info("不能编辑其他人的文章").build();
+            }
+            originArticle.title = article.title;
+            originArticle.brief = article.brief;
+            originArticle.image = article.image;
+            originArticle.tags = article.tags;
+            originArticle.content = article.content;
+
+            articleDao.update(originArticle);
+
+            return Response.status(200).info("编辑成功").build();
+
+        } else {
+            article.authorId = user.id;
+            article.authorName = user.nickName;
+
+            articleDao.save(article);
+
+            return Response.status(200).info("发表成功").build();
         }
-
-        article.authorId = user.id;
-        article.authorName = user.nickName;
-        dao.save(article);
-
-        return Response.status(200).info("发表成功").build();
     }
 
     @RequestMapping(value = "/preview", method = RequestMethod.POST)
@@ -64,7 +81,7 @@ public class ArticleAjaxController {
     public Response loadPage(
             @RequestParam(value = "title", required = true) String title,
             HttpServletResponse response){
-        Article article = dao.loadArticleByTitle(title);
+        Article article = articleDao.loadArticleByTitle(title);
         if(article==null){
             return Response.status(400).info("文章不存在").build();
         }

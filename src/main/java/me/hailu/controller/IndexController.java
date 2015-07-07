@@ -3,6 +3,8 @@ package me.hailu.controller;
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
 import me.hailu.article.ArticleType;
+import me.hailu.bean.Carousel;
+import me.hailu.bean.dao.CarouselDao;
 import me.hailu.controller.base.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,20 +22,11 @@ public class IndexController extends BaseController {
 
     ArticleDao articleDao = new ArticleDao();
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    CarouselDao carouselDao = new CarouselDao();
+
+    @RequestMapping(value = "/index", method = {RequestMethod.GET, RequestMethod.HEAD} )
     public ModelAndView index() {
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("headerText1","KANKAN");
-        params.put("content1","有人撸吗？");
-        params.put("headerText2","Strong");
-        params.put("content2","撸起!");
-        params.put("headerText3","Troy");
-        params.put("content3","还撸么？");
-        params.put("headerText4","Firefly");
-        params.put("content4","你们撸吧，我先不撸了。");
-
-//        Map<Integer, Article> prologue = new HashMap<Integer, Article>(4);
-
         List<Article> articles = articleDao.findByType(ArticleType.DEFAULT, 9);
         List<Article> aboutus = articleDao.findByType(ArticleType.ABOUTUS, 4);
         Collections.sort(aboutus, new Comparator<Article>() {
@@ -42,11 +35,13 @@ public class IndexController extends BaseController {
                 return o1.id - o2.id;
             }
         });
-
+        List<Carousel> indexs = carouselDao.loadCarousels();
+        params.put("indexs", indexs);
         params.put("articles", articles);
         params.put("prologues", aboutus);
+        params.put("index", true);
 
-        return new MVFactory().createMV("index", params);
+        return createMV("index", params);
     }
 
 }

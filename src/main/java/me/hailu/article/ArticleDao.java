@@ -19,4 +19,11 @@ public class ArticleDao extends GenericDAO<Article>{
                 collection.find("{type:#}", type.toString()).limit(count).sort("{id:-1}").as(Article.class)
         );
     }
+
+    public List<Article> findNewArticleList(int count){
+        return Lists.newArrayList(
+                collection.find().limit(count).as(Article.class)
+        );
+    }
+
 }

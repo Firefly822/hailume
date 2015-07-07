@@ -24,83 +24,114 @@
 
     <link href="/static/app/css/header.css" rel="stylesheet">
     <link href="/static/app/css/index.css" rel="stylesheet">
+    <%--<link type="text/css" rel="stylesheet" href="http://static.qiyi.com/css/common/v3-index-iqiyi/index-iqiyi-v1.css" />--%>
 
 </head>
 
 <body>
 <c:import url="header.jsp"></c:import>
 
-<!-- begin:featured -->
+<%--<!-- begin:featured -->--%>
+<%--<div id="featured">--%>
+    <%--<div class="container">--%>
+        <%--<div id="main_area" style="margin-bottom: 10px;">--%>
+            <%--<!-- Slider -->--%>
+            <%--<div class="row">--%>
+                <%--<div class="col-xs-12" id="slider">--%>
+                    <%--<!-- Top part of the slider -->--%>
+                    <%--<div class="row">--%>
+                        <%--<div class="col-sm-8" id="carousel-bounding-box">--%>
+                            <%--<div class="carousel slide" id="myCarousel">--%>
+                                <%--<!-- Carousel items -->--%>
+                                <%--<div class="carousel-inner">--%>
+                                    <%--<c:forEach items="${indexs}" var="carousel" varStatus="status">--%>
+                                        <%--<a <c:choose>--%>
+                                            <%--<c:when test="${status.index==0}">class="active item"</c:when>--%>
+                                            <%--<c:otherwise>class="item"</c:otherwise>--%>
+                                        <%--</c:choose> data-slide-number="${status.index}" href="${carousel.link}" target="_blank">--%>
+                                            <%--<img src="${carousel.image}">--%>
+                                        <%--</a>--%>
+                                    <%--</c:forEach>--%>
+                                <%--</div><!-- Carousel nav -->--%>
+                                <%--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">--%>
+                                    <%--<span class="glyphicon glyphicon-chevron-left"></span>--%>
+                                <%--</a>--%>
+                                <%--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">--%>
+                                    <%--<span class="glyphicon glyphicon-chevron-right"></span>--%>
+                                <%--</a>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+
+                        <%--<div class="col-sm-4" id="carousel-text"></div>--%>
+
+                        <%--<div id="slide-content" style="display: none;">--%>
+                            <%--<c:forEach items="${indexs}" var="carousel" varStatus="status">--%>
+                                <%--<div id='slide-content-${status.index}'>--%>
+                                    <%--<h2>${carousel.title}</h2>--%>
+                                    <%--<p>${carousel.brief}</p>--%>
+                                <%--</div>--%>
+                            <%--</c:forEach>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div><!--/Slider-->--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
+<%--<!-- end:featured -->--%>
+
 <div id="featured">
     <div class="container">
         <div id="main_area" style="margin-bottom: 10px;">
-            <!-- Slider -->
-            <div class="row">
-                <div class="col-xs-12" id="slider">
-                    <!-- Top part of the slider -->
-                    <div class="row">
-                        <div class="col-sm-8" id="carousel-bounding-box">
-                            <div class="carousel slide" id="myCarousel">
-                                <!-- Carousel items -->
-                                <div class="carousel-inner">
-                                    <a class="active item" data-slide-number="0" href="/a/4" target="_blank">
-                                        <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510102999502.jpg">
-                                    </a>
-
-                                    <a class="item" data-slide-number="1" href="/a/3" target="_blank">
-                                        <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103176146.jpg">
-                                    </a>
-
-                                    <a class="item" data-slide-number="2" href="javascript:;">
-                                        <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/2014072510103307379.jpg">
-                                    </a>
-
-                                    <a class="item" data-slide-number="3" href="javascript:;">
-                                        <img src="http://image.uuu9.com/pcgame/lol//UploadFiles//201407/201407251010348231113.jpg">
-                                    </a>
+<div class="page-wrap" style="margin: 0;padding: 0;vertical-align: baseline;">
+<div id="block-B" data-block-name="焦点图">
 
 
-                                </div><!-- Carousel nav -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="col-sm-4" id="carousel-text"></div>
-
-                        <div id="slide-content" style="display: none;">
-                            <div id="slide-content-0">
-                                <h2>${headerText1}</h2>
-                                <p>${content1}</p>
-                            </div>
-
-                            <div id="slide-content-1">
-                                <h2>${headerText2}</h2>
-                                <p>${content2}</p>
-                            </div>
-
-                            <div id="slide-content-2">
-                                <h2>${headerText3}</h2>
-                                <p>${content3}</p>
-                            </div>
-
-                            <div id="slide-content-3">
-                                <h2>${headerText4}</h2>
-                                <p>${content4}</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div><!--/Slider-->
+<div class="mod_focus-index">
+<div class="focus-index_inner" style="display: block;" id="indexfocus">
+<!-- 焦点图-图片列表 -->
+<div class="focus-index_listwrap">
+    <ul class="mod_focus-index_list">
+    <c:forEach items="${indexs}" var="carousel" varStatus="status">
+        <li style="display: block; opacity: 1; background-image: url(${carousel.image});">
+            <a class="mod_focus-index_item" href="${carousel.link}" alt="${carousel.brief}" target="_blank"></a>
+        </li>
+    </c:forEach>
+    </ul>
+</div>
+<!-- 焦点图-文字列表 -->
+<div class="focus-index_thumbnailWrap">
+    <div class="focus-index_thumbnailBg" style="background: url(/static/img/site-focuslist_bg.png);"></div>
+    <div class="focus-index_thumbnail">
+        <div class="index_thumbnail_inner">
+            <ul class="thumbnail_list" style="list-style: none outside none;">
+                <c:forEach items="${indexs}" var="carousel" varStatus="status">
+                    <c:choose>
+                        <c:when test="${status.index==0}">
+                            <li data-indexfocus-index="0" class="selected">
+                                <a href="${carousel.link}" class="thumbnail_item " alt="${carousel.brief}" target="_blank">${carousel.title}</a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li data-indexfocus-index="${status.index}">
+                                <a href="${carousel.link}" class="thumbnail_item " alt="${carousel.brief}" target="_blank">${carousel.title}</a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+            </ul>
         </div>
     </div>
 </div>
-<!-- end:featured -->
+</div>
+</div>
+</div>
+
+</div>
+            </div>
+        </div>
+    </div>
 
 <!-- begin:content -->
 <section id="content">
@@ -150,7 +181,7 @@
                             <h3>${prologue.title}</h3>
                             <p>${prologue.brief}</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </li>
         </c:forEach>

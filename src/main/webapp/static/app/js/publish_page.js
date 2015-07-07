@@ -8,11 +8,13 @@ jQuery(document).ready(function(){
             return;
         }
         var editor = UM.getEditor("container");
+        var content = editor.getContent();
         $.ajax({
             type: "POST",
             contentType: "application/json",
             url: "/ajax/article/publish",
             data: JSON.stringify({
+                id: articleId,
                 title: $('#edit-title').val(),
                 brief: $('#edit-brief').val(),
                 image: {
@@ -20,7 +22,7 @@ jQuery(document).ready(function(){
                     description: $('#edit-title').val()
                 },
                 tags: $('#tokenfield').tokenfield('getTokensList').split(', '),
-                content: editor.getContent()
+                content: content,
             }),
             success: function (json) {
                 if (json.code == 200) {
@@ -87,11 +89,21 @@ jQuery(document).ready(function(){
         showAutocompleteOnFocus: true
     })
 
-    $("#input-id").fileinput('refresh', {
-        uploadClass: 'btn btn-default J-upload-face',
-        showRemove: false
-    });
-//
+    if (image) {
+        $("#input-id").fileinput('refresh', {
+            uploadClass: 'btn btn-default J-upload-face',
+            showRemove: false,
+            initialPreview: [
+                "<img src='"+image+"' class='file-preview-image'"
+            ]
+        });
+    } else {
+        $("#input-id").fileinput('refresh', {
+            uploadClass: 'btn btn-default J-upload-face',
+            showRemove: false
+        });
+    }
+
     $(".J-upload-face").click(function(){
         if ($("#input-id").val() == "") {
             alert('nothing to upload');

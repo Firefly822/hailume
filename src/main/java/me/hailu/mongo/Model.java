@@ -24,6 +24,7 @@ public class Model implements Serializable {
 
     @JsonProperty("_id")
     protected ObjectId _id;
+
     public int id;
     public Date addTime;
     public Date updateTime;
@@ -41,6 +42,14 @@ public class Model implements Serializable {
     @Deprecated
     public void set_id(ObjectId _id) {
         this._id = _id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

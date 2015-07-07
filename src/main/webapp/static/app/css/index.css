@@ -7,3 +7,100 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+
+.focus-index_inner {
+    position: relative;
+    z-index: 40;
+    width: 100%;
+    height: 410px;
+    background-color: #010101;
+    overflow: hidden;
+}
+
+.focus-index_listwrap, .mod_focus-index_list {
+    height: 410px;
+}
+
+.mod_focus-index_list li {
+    height: 410px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.mod_focus-index_list .mod_focus-index_item {
+    display: block;
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.thumbnail_list .thumbnail_item {
+    overflow: hidden;
+    display: block;
+    height: 34px;
+    padding: 0 8px;
+    line-height: 34px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.thumbnail_list .selected .thumbnail_item {
+    padding: 0 7px;
+    background-color: #699f00;
+    color: #fff;
+}
+
+.focus-index_thumbnailWrap {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.focus-index_thumbnailBg {
+    position: absolute;
+    width: 247px;
+    height: 371px;
+    background: url(/static/img/site-focuslist_bg.png) no-repeat;
+    bottom: 0;
+    right: -13px;
+    z-index: 14;
+}
+
+.focus-index_thumbnail {
+    position: absolute;
+    width: 212px;
+    right: 5px;
+    bottom: 13px;
+    z-index: 15;
+}
+
+.index_thumbnail_inner {
+    overflow: hidden;
+    height: 340px;
+    border-radius: 6px;
+}
+
+.thumbnail_list .selected {
+    border: 1px solid #63940e;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.thumbnail_list li {
+    position: relative;
+}
+
+div ul li {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.thumbnail_list {
+    padding:0;
+}
+
+.mod_focus-index_list {
+    padding: 0;
+}

@@ -16,7 +16,9 @@
         <div class="collapse navbar-collapse" id="navbar-top">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="/">首页</a></li>
-                <li><a href="javascript:;">关于我们</a></li>
+                <c:if test="${index}">
+                    <li><a href="#portfolio">关于我们</a></li>
+                </c:if>
 
                 <c:if test="${userNickName != null && fn:length(userNickName) > 0}">
                     <li class="dropdown" id="userIcon">

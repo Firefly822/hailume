@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -23,21 +24,25 @@ public abstract class BaseController {
     @Autowired
     protected javax.servlet.http.HttpServletRequest request;
 
+    DailyReportDao dailyReportDao = new DailyReportDao();
+
     protected User getUser() {
         return (User) request.getAttribute(Constants.USER_INFO);
     }
 
-    public class MVFactory {
+    protected ModelAndView createMV(String view) {
+        return createMV(view, null);
+    }
 
-        DailyReportDao dailyReportDao = new DailyReportDao();
-
-        public ModelAndView createMV(String view, Map<String, Object> params) {
-            User user = getUser();
-            if (user != null) {
-                params.put("userNickName", user.nickName);
-            }
-            dailyReportDao.incAccess(new Date(), view);
-            return new ModelAndView(view, params);
+    protected ModelAndView createMV(String view, Map<String, Object> params) {
+        if (params == null) {
+            params = new HashMap<String, Object>();
         }
+        User user = getUser();
+        if (user != null) {
+            params.put("userNickName", user.nickName);
+        }
+        dailyReportDao.incAccess(new Date(), view);
+        return new ModelAndView(view, params);
     }
 }

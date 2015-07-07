@@ -33,26 +33,27 @@
     <c:import url="header.jsp"></c:import>
 
     <div id="featured">
-        <div class="container">
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <div class="container" id="tabs">
+            <table id="publish" width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tbody>
                     <tr>
                         <th>标题：</th>
-                        <td><input id="edit-title" type="text" style="width: 500px"></td>
+                        <td><input id="edit-title" type="text" style="width: 500px" value="${article.title}"></td>
                     </tr>
                     <tr>
                         <th>标签：</th>
-                        <td><input type="text" class="form-control" id="tokenfield" placeholder="输入标签并按回车"/></td>
+                        <td><input type="text" class="form-control" id="tokenfield" placeholder="输入标签并按回车" value="${tags}"></td>
                     </tr>
                     <tr>
                         <th>摘要：</th>
-                        <td><textarea id="edit-brief" type="text" rows="3" style="width: 100%;"></textarea></td>
+                        <td><textarea id="edit-brief" type="text" rows="3" style="width: 100%;">${article.brief}</textarea></td>
                     </tr>
+
                     <tr>
                         <th>封面：</th>
                         <td>
                             <form id="face-pic" method="POST" action="/ajax/upload/file" enctype="multipart/form-data" target='frameFile'>
-                                <input id="input-id" name="file" type="file" class="file J-cover" data-preview-file-type="text" >
+                                <input id="input-id" name="file" type="file" class="file J-cover" data-preview-file-type="text" cover-url="${article.image.url}">
                                 <%--<input id="submit-face" value="upload" type="button">--%>
                             </form>
                         </td>
@@ -61,7 +62,7 @@
                         <th>内容：</th>
                         <td>
                             <!-- 百度编辑器 -->
-                            <script id="container" name="content" type="text/plain" style="width:100%;height:50%;"></script>
+                            <script id="container" name="content" type="text/plain" style="width:100%;height:50%;">${article.content}</script>
                         </td>
                     </tr>
                     <tr>
@@ -101,5 +102,11 @@
     <script type="text/javascript" src="/static/umeditor/umeditor.js"></script>
     <!-- 语言包文件 -->
     <script type="text/javascript" src="/static/umeditor/lang/zh-cn/zh-cn.js"></script>
+    <script>
+        var articleId = 0;
+        var image;
+        <c:if test="${article.id > 0}">articleId = ${article.id};</c:if>
+        <c:if test="${article.image.url != null}">var image = "${article.image.url}";</c:if>
+    </script>
 </body>
 </html>
