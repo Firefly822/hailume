@@ -44,7 +44,7 @@ public class ArticleAjaxController {
             }
             originArticle.title = article.title;
             originArticle.brief = article.brief;
-            DomainUtils.replaceDomain(article.image.url);
+            article.image.url = DomainUtils.replaceDomain(article.image.url);
             originArticle.image = article.image;
             originArticle.tags = article.tags;
             originArticle.content = article.content;
@@ -69,6 +69,7 @@ public class ArticleAjaxController {
         Map<String, Object> params = new HashMap<String, Object>();
 
         String date = DateFormat.getDateInstance().format(new Date());
+        article.image.url = DomainUtils.replaceDomain(article.image.url);
         params.put("article", article);
         params.put("date", date);
 
@@ -87,6 +88,7 @@ public class ArticleAjaxController {
         if(article==null){
             return Response.status(400).info("文章不存在").build();
         }
+        article.image.url = DomainUtils.replaceDomain(article.image.url);
         Map<String,String> result = new HashMap<String,String>();
         result.put("title",article.title);
         result.put("content",article.content);

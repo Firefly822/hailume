@@ -38,7 +38,7 @@ public class ArticleController extends BaseController {
         }
 
         Article article = articleDao.loadById(id);
-        DomainUtils.replaceDomain(article.image.url);
+        article.image.url = DomainUtils.replaceDomain(article.image.url);
         User user = (User) request.getAttribute(Constants.USER_INFO);
         if (article.authorId != user.id) {
             return createMV("error");
@@ -55,7 +55,7 @@ public class ArticleController extends BaseController {
         Map<String, Object> params = new HashMap<String, Object>();
 
         Article article = articleDao.loadById(id);
-        DomainUtils.replaceDomain(article.image.url);
+        article.image.url = DomainUtils.replaceDomain(article.image.url);
         if (article == null) {
             return createMV("error");
         }

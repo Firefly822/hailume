@@ -7,9 +7,10 @@ import org.apache.commons.lang.StringUtils;
  */
 public abstract class DomainUtils {
 
-    public static void replaceDomain(String url) {
+    public static String replaceDomain(String url) {
         if (StringUtils.isNotBlank(url)) {
-            url = url.replaceFirst("http://hailume.qiniudn.com", "http://7oxg65.com1.z0.glb.clouddn.com");
+            return url.replaceFirst("http://hailume.qiniudn.com", "http://7oxg65.com1.z0.glb.clouddn.com");
         }
+        return "";
     }
 }
