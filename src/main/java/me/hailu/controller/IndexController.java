@@ -6,7 +6,9 @@ import me.hailu.article.ArticleType;
 import me.hailu.bean.Carousel;
 import me.hailu.bean.dao.CarouselDao;
 import me.hailu.controller.base.BaseController;
+import me.hailu.util.DomainUtils;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,12 +32,27 @@ public class IndexController extends BaseController {
         List<Article> articles = articleDao.findByType(ArticleType.DEFAULT, 9);
         List<Article> aboutus = articleDao.findByType(ArticleType.ABOUTUS, 4);
         Collections.sort(aboutus, new Comparator<Article>() {
-            @Override
             public int compare(Article o1, Article o2) {
                 return o1.id - o2.id;
             }
         });
         List<Carousel> indexs = carouselDao.loadCarousels();
+
+        if (!CollectionUtils.isEmpty(articles)) {
+            for (Article article : articles) {
+                DomainUtils.replaceDomain(article.image.url);
+            }
+        }
+        if (!CollectionUtils.isEmpty(aboutus)) {
+            for (Article article : aboutus) {
+                DomainUtils.replaceDomain(article.image.url);
+            }
+        }
+        if (!CollectionUtils.isEmpty(indexs)) {
+            for (Carousel carousel : indexs) {
+                DomainUtils.replaceDomain(carousel.image);
+            }
+        }
         params.put("indexs", indexs);
         params.put("articles", articles);
         params.put("prologues", aboutus);

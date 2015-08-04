@@ -5,6 +5,7 @@ import me.hailu.article.ArticleDao;
 import me.hailu.controller.base.Response;
 import me.hailu.http.Constants;
 import me.hailu.user.User;
+import me.hailu.util.DomainUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -43,6 +44,7 @@ public class ArticleAjaxController {
             }
             originArticle.title = article.title;
             originArticle.brief = article.brief;
+            DomainUtils.replaceDomain(article.image.url);
             originArticle.image = article.image;
             originArticle.tags = article.tags;
             originArticle.content = article.content;

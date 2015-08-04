@@ -5,6 +5,7 @@ import me.hailu.article.ArticleDao;
 import me.hailu.controller.base.BaseController;
 import me.hailu.http.Constants;
 import me.hailu.user.User;
+import me.hailu.util.DomainUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,6 +38,7 @@ public class ArticleController extends BaseController {
         }
 
         Article article = articleDao.loadById(id);
+        DomainUtils.replaceDomain(article.image.url);
         User user = (User) request.getAttribute(Constants.USER_INFO);
         if (article.authorId != user.id) {
             return createMV("error");
@@ -53,6 +55,7 @@ public class ArticleController extends BaseController {
         Map<String, Object> params = new HashMap<String, Object>();
 
         Article article = articleDao.loadById(id);
+        DomainUtils.replaceDomain(article.image.url);
         if (article == null) {
             return createMV("error");
         }
