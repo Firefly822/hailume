@@ -32,7 +32,7 @@
               <span><em><a href="javascript:;">${article.authorName}</a> 发表</em></span>
               <span><em>编辑于 <s:formatDate value="${article.addTime}" type="date" /></em></span>
             </div>
-            <div style="text-align: center;">
+            <div>
               ${article.content}
             </div>
           </div>
