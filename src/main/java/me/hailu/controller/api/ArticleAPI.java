@@ -34,7 +34,7 @@ public class ArticleAPI extends BaseController {
         if (article == null) {
             return Response.status(404).info("没有数据").build();
         }
-        return Response.status(200).info("获取成功").entity(transferToVO(article)).build();
+        return Response.status(200).info("获取成功").entity(transferToVO(article, true)).build();
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -55,13 +55,13 @@ public class ArticleAPI extends BaseController {
             return articleVOs;
         }
         for (Article article : articles) {
-            ArticleVO articleVO = transferToVO(article);
+            ArticleVO articleVO = transferToVO(article, false);
             articleVOs.add(articleVO);
         }
         return articleVOs;
     }
 
-    private ArticleVO transferToVO(Article article) {
+    private ArticleVO transferToVO(Article article, boolean needContent) {
         ArticleVO articleVO = new ArticleVO();
         articleVO.id = article.id;
         articleVO.title = article.title;
