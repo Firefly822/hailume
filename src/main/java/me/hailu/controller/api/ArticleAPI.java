@@ -82,7 +82,11 @@ public class ArticleAPI extends BaseController {
 
     private ArticleVO transferToVO(Carousel carousel) {
         ArticleVO articleVO = new ArticleVO();
-        articleVO.url = carousel.link;
+        if (carousel.link.startsWith("http")) {
+            articleVO.url = carousel.link;
+        } else {
+            articleVO.url = "http://hailu.me" + carousel.link;
+        }
         articleVO.image = carousel.image;
         articleVO.title = carousel.title;
         articleVO.brief = carousel.brief;
