@@ -62,7 +62,8 @@ public class ArticleAPI extends BaseController {
 
         return articleVO;
     }
-
+    @RequestMapping(value = "/carousel", method = RequestMethod.GET)
+    @ResponseBody
     public Response findCarousels(@RequestParam(value = "size", required = false) int count) {
         if (count == 0) {
             count = 5;
