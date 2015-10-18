@@ -49,4 +49,13 @@ public abstract class BaseController {
     protected void logAccess(String req) {
         dailyReportDao.incAccess(new Date(), req);
     }
+
+    protected boolean fromMobile() {
+        String userAgent = request.getHeader("User-Agent").toLowerCase();
+        if (userAgent.contains("mobile") || userAgent.contains("iphone")
+                || userAgent.contains("android")) {
+            return true;
+        }
+        return false;
+    }
 }

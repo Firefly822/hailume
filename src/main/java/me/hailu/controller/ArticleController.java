@@ -64,6 +64,10 @@ public class ArticleController extends BaseController {
         params.put("article", article);
         params.put("date", date);
 
+        if (fromMobile()) {
+            return createMV("m/article", params);
+        }
+
         return createMV("article", params);
     }
 }
