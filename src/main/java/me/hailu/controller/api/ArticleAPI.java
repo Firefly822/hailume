@@ -68,7 +68,9 @@ public class ArticleAPI extends BaseController {
         articleVO.time = dateFormat.format(article.addTime);
         articleVO.brief = article.brief;
         articleVO.image = article.image == null ? null : article.image.url;
-        articleVO.content = article.content;
+        if (needContent) {
+            articleVO.content = article.content;
+        }
 
         return articleVO;
     }
