@@ -31,55 +31,6 @@
 <body>
 <c:import url="header.jsp"></c:import>
 
-<%--<!-- begin:featured -->--%>
-<%--<div id="featured">--%>
-    <%--<div class="container">--%>
-        <%--<div id="main_area" style="margin-bottom: 10px;">--%>
-            <%--<!-- Slider -->--%>
-            <%--<div class="row">--%>
-                <%--<div class="col-xs-12" id="slider">--%>
-                    <%--<!-- Top part of the slider -->--%>
-                    <%--<div class="row">--%>
-                        <%--<div class="col-sm-8" id="carousel-bounding-box">--%>
-                            <%--<div class="carousel slide" id="myCarousel">--%>
-                                <%--<!-- Carousel items -->--%>
-                                <%--<div class="carousel-inner">--%>
-                                    <%--<c:forEach items="${indexs}" var="carousel" varStatus="status">--%>
-                                        <%--<a <c:choose>--%>
-                                            <%--<c:when test="${status.index==0}">class="active item"</c:when>--%>
-                                            <%--<c:otherwise>class="item"</c:otherwise>--%>
-                                        <%--</c:choose> data-slide-number="${status.index}" href="${carousel.link}" target="_blank">--%>
-                                            <%--<img src="${carousel.image}">--%>
-                                        <%--</a>--%>
-                                    <%--</c:forEach>--%>
-                                <%--</div><!-- Carousel nav -->--%>
-                                <%--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">--%>
-                                    <%--<span class="glyphicon glyphicon-chevron-left"></span>--%>
-                                <%--</a>--%>
-                                <%--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">--%>
-                                    <%--<span class="glyphicon glyphicon-chevron-right"></span>--%>
-                                <%--</a>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-
-                        <%--<div class="col-sm-4" id="carousel-text"></div>--%>
-
-                        <%--<div id="slide-content" style="display: none;">--%>
-                            <%--<c:forEach items="${indexs}" var="carousel" varStatus="status">--%>
-                                <%--<div id='slide-content-${status.index}'>--%>
-                                    <%--<h2>${carousel.title}</h2>--%>
-                                    <%--<p>${carousel.brief}</p>--%>
-                                <%--</div>--%>
-                            <%--</c:forEach>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div><!--/Slider-->--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
-<%--<!-- end:featured -->--%>
-
 <div id="featured">
     <div class="container">
         <div id="main_area" style="margin-bottom: 10px;">

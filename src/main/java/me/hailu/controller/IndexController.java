@@ -40,12 +40,16 @@ public class IndexController extends BaseController {
 
         if (!CollectionUtils.isEmpty(articles)) {
             for (Article article : articles) {
-                article.image.url = DomainUtils.replaceDomain(article.image.url);
+                if (article.image != null) {
+                    article.image.url = DomainUtils.replaceDomain(article.image.url);
+                }
             }
         }
         if (!CollectionUtils.isEmpty(aboutus)) {
             for (Article article : aboutus) {
-                article.image.url = DomainUtils.replaceDomain(article.image.url);
+                if (article.image != null) {
+                    article.image.url = DomainUtils.replaceDomain(article.image.url);
+                }
             }
         }
         if (!CollectionUtils.isEmpty(indexs)) {

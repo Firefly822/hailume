@@ -16,7 +16,18 @@ public class ArticleDao extends GenericDAO<Article>{
 
     public List<Article> findByType(ArticleType type, int count) {
         return Lists.newArrayList(
-                collection.find("{type:#}", type.toString()).limit(count).sort("{id:-1}").as(Article.class)
+                collection.find("{type:#}", type.toString()).limit(count)
+                        .sort("{id:-1}").as(Article.class)
+        );
+    }
+
+    public List<Article> paginateByType(ArticleType type, int count, int page) {
+        if (page <= 0) {
+            page = 1;
+        }
+        return Lists.newArrayList(
+                collection.find("{type:#}", type.toString()).limit(count)
+                        .skip((page-1)*count).sort("{id:-1}").as(Article.class)
         );
     }
 

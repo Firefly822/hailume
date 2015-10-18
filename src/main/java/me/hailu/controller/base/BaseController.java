@@ -42,7 +42,11 @@ public abstract class BaseController {
         if (user != null) {
             params.put("userNickName", user.nickName);
         }
-        dailyReportDao.incAccess(new Date(), view);
+        logAccess(view);
         return new ModelAndView(view, params);
+    }
+
+    protected void logAccess(String req) {
+        dailyReportDao.incAccess(new Date(), req);
     }
 }

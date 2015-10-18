@@ -2,24 +2,21 @@ package me.hailu.controller;
 
 import me.hailu.article.Article;
 import me.hailu.article.ArticleDao;
-import me.hailu.article.ArticleType;
 import me.hailu.bean.Carousel;
 import me.hailu.bean.dao.CarouselDao;
 import me.hailu.controller.base.BaseController;
 import me.hailu.controller.base.Response;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.text.DateFormat;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by wangyapeng on 15/3/4.
  */
-@Controller
+//@Controller
 @RequestMapping(value = "/")
 public class ApiController extends BaseController{
 
