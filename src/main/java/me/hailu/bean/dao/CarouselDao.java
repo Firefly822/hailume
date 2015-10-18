@@ -17,6 +17,12 @@ public class CarouselDao extends GenericDAO<Carousel> {
         );
     }
 
+    public List<Carousel> loadCarousels(int count) {
+        return Lists.newArrayList(
+                collection.find().sort("{index:1}").limit(count).as(Carousel.class)
+        );
+    }
+
     public Carousel findCarousel(int index){
         return collection.findOne("{index:#}", index).as(Carousel.class);
     }
