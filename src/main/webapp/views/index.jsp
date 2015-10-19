@@ -15,7 +15,7 @@
     <title>还撸么——宅乐园</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/static/css/font-awesome.min.css" rel="stylesheet">
@@ -162,8 +162,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/masonry.pkgd.min.js"></script>
 <script src="/static/js/imagesloaded.pkgd.min.js"></script>
 <script src="/static/js/gmap3.min.js"></script>

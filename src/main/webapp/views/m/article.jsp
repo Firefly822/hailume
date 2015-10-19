@@ -11,7 +11,7 @@
   <title>${article.title} —— 还撸么，宅乐园</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/static/css/bootstrap.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="/static/css/style.css" rel="stylesheet">
   <link href="/static/app/css/article.css" rel="stylesheet">
