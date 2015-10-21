@@ -794,7 +794,7 @@ input[type="color"]:focus,
 
 .post-single img{
 	max-width: 100%;
-	width: 100%;
+	width: auto;
 	height: auto;
 	margin-bottom: 20px;
 	margin-top: 20px;
