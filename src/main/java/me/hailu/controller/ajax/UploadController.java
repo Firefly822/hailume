@@ -1,5 +1,6 @@
 package me.hailu.controller.ajax;
 
+import me.hailu.bean.UploadFilesResponse;
 import me.hailu.controller.base.Response;
 import me.hailu.service.UploadService;
 import org.apache.commons.lang.StringUtils;
@@ -14,7 +15,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -48,5 +51,21 @@ public class UploadController {
             return Response.status(500).info("文件上传异常").build();
         }
         return Response.status(200).entity(url).build();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/files", method = RequestMethod.POST)
+    public UploadFilesResponse uploadFiles(@RequestParam("files[]") List<MultipartFile> files) {
+        if (files == null || files.isEmpty()) {
+            return new UploadFilesResponse(null);
+        }
+
+        Response response = uploadFile(files.get(0));
+        if(response.code==200){
+            List<UploadFilesResponse.FileResponse> responseList = new ArrayList<UploadFilesResponse.FileResponse>();
+            responseList.add(new UploadFilesResponse.FileResponse((String) response.entity));
+            return new UploadFilesResponse(responseList);
+        }
+        return new UploadFilesResponse(null);
     }
 }

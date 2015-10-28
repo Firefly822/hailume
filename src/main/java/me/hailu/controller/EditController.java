@@ -34,4 +34,11 @@ public class EditController extends BaseController{
         params.put("carousels",data);
         return createMV("slidemanage", params);
     }
+
+    @RequestMapping(value = "/edit/news", method = RequestMethod.GET)
+    public ModelAndView editNews(){
+
+        Map<String, Object> params = new HashMap<String, Object>();
+        return createMV("news_editor", params);
+    }
 }
