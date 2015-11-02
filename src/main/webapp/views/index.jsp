@@ -51,30 +51,6 @@
     </c:forEach>
     </ul>
 </div>
-<!-- 焦点图-文字列表 -->
-<div class="focus-index_thumbnailWrap">
-    <div class="focus-index_thumbnailBg" style="background: url(/static/img/site-focuslist_bg.png);"></div>
-    <div class="focus-index_thumbnail">
-        <div class="index_thumbnail_inner">
-            <ul class="thumbnail_list" style="list-style: none outside none;">
-                <c:forEach items="${indexs}" var="carousel" varStatus="status">
-                    <c:choose>
-                        <c:when test="${status.index==0}">
-                            <li data-indexfocus-index="0" class="selected">
-                                <a href="${carousel.link}" class="thumbnail_item " alt="${carousel.brief}" target="_blank">${carousel.title}</a>
-                            </li>
-                        </c:when>
-                        <c:otherwise>
-                            <li data-indexfocus-index="${status.index}">
-                                <a href="${carousel.link}" class="thumbnail_item " alt="${carousel.brief}" target="_blank">${carousel.title}</a>
-                            </li>
-                        </c:otherwise>
-                    </c:choose>
-                </c:forEach>
-            </ul>
-        </div>
-    </div>
-</div>
 </div>
 </div>
 </div>

@@ -352,7 +352,7 @@ input[type="color"]:focus,
 #header{
 	position: relative;
 	width: 100%;
-	padding-top: 160px;
+	padding-top: 100px;
 	-webkit-background-size: cover !important;
 	   -moz-background-size: cover !important;
 		-ms-background-size: cover !important;
