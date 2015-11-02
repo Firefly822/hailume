@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/static/img/favicon.png">
 
-    <title>${article.title} —— 还撸么，宅乐园</title>
+    <title>${article.title} —— 还撸么 宅生活</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
