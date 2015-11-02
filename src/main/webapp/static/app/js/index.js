@@ -23,18 +23,20 @@ jQuery(document).ready(function($) {
 
     $('.mod_focus-index_list li').fadeOut(0).eq(0).fadeIn(0);
     var i = 0;
-    setInterval(function(){if ($(".mod_focus-index_list li").length > (i+1)){
-            $(".mod_focus-index_list li").eq(i).fadeOut(0).next("li").fadeIn(1000);
-            $(".thumbnail_list li").eq(i).removeClass('selected');
-            $(".thumbnail_list li").eq(i+1).addClass('selected');
-            i++;
-        }
-        else{
-            $(".mod_focus-index_list li").eq(i).fadeOut(0).siblings("li").eq(0).fadeIn(1000);
-            $(".thumbnail_list li").eq(i).removeClass('selected');
-            $(".thumbnail_list li").eq(0).addClass('selected');
-            i = 0;
-        }
-    },5000);
+    if ($(".mod_focus-index_list li").length > 1) {
+        setInterval(function(){if ($(".mod_focus-index_list li").length > (i+1)){
+                $(".mod_focus-index_list li").eq(i).fadeOut(0).next("li").fadeIn(1000);
+                $(".thumbnail_list li").eq(i).removeClass('selected');
+                $(".thumbnail_list li").eq(i+1).addClass('selected');
+                i++;
+            }
+            else{
+                $(".mod_focus-index_list li").eq(i).fadeOut(0).siblings("li").eq(0).fadeIn(1000);
+                $(".thumbnail_list li").eq(i).removeClass('selected');
+                $(".thumbnail_list li").eq(0).addClass('selected');
+                i = 0;
+            }
+        },5000);
+    }
 
 });
