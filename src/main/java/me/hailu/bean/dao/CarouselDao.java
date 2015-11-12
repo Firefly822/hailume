@@ -13,7 +13,7 @@ public class CarouselDao extends GenericDAO<Carousel> {
 
     public List<Carousel> loadCarousels(){
         return Lists.newArrayList(
-                collection.find().sort("{index:1}").as(Carousel.class)
+                collection.find().sort("{id:-1}").as(Carousel.class)
         );
     }
 

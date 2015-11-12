@@ -68,13 +68,12 @@
 
                 <ul id="list" class="list-unstyled container-portfolio">
                     <c:forEach items="${carousels}" varStatus="status" var="carousel">
-                        <li class="bag dress" title="${carousel.id}">
+                        <li class="bag dress">
                             <div class="portfolio-item">
                                 <div class="portfolio-img" style="background: url(${carousel.image});"></div>
                                 <div class="portfolio-caption">
                                     <div class="portfolio-text">
-                                        <h3>${carousel.title}</h3>
-                                        <p><a href="${carousel.link}">${carousel.brief}</a></p>
+                                        <h3><a href="${carousel.link}">${carousel.title}</a></h3>
                                         <a href='#editSlide' data-toggle='modal' class="btn btn-info">View &raquo;</a>
                                     </div>
                                 </div>
