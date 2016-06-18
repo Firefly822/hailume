@@ -29,6 +29,7 @@ public class IndexController extends BaseController {
     @RequestMapping(value = "/index", method = {RequestMethod.GET, RequestMethod.HEAD} )
     public ModelAndView index() {
         Map<String, Object> params = new HashMap<String, Object>();
+        articleDao = null;
         List<Article> articles = articleDao.findByType(ArticleType.DEFAULT, 9);
         List<Article> aboutus = articleDao.findByType(ArticleType.ABOUTUS, 4);
         Collections.sort(aboutus, new Comparator<Article>() {
