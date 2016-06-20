@@ -4,10 +4,10 @@ import me.hailu.weixin.CheckUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * Created by liming_liu on 16/6/18.
@@ -21,9 +21,13 @@ public class WeixinController {
 
     @ResponseBody
     @RequestMapping(value = "/weixin")
-    public String serveWeixin() {
-        System.out.println("/weixin request receive");
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+    public String serveWeixin(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            System.out.println("/weixin request receive: " + request.getInputStream().toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
 
         // 接收微信服务器以Get请求发送的4个参数
         String signature = request.getParameter("signature");
