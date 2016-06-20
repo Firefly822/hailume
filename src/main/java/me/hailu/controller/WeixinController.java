@@ -1,6 +1,7 @@
 package me.hailu.controller;
 
 import me.hailu.weixin.CheckUtil;
+import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.StringWriter;
 
 /**
  * Created by liming_liu on 16/6/18.
@@ -23,7 +25,9 @@ public class WeixinController {
     @RequestMapping(value = "/weixin")
     public String serveWeixin(HttpServletRequest request, HttpServletResponse response) {
         try {
-            System.out.println("/weixin request receive: " + request.getInputStream().toString());
+            StringWriter writer = new StringWriter();
+            IOUtils.copy(request.getInputStream(), writer);
+            System.out.println("/weixin request receive: " + writer.toString());
         } catch (IOException e) {
             e.printStackTrace();
             return null;
