@@ -7,6 +7,14 @@
     <display-name>hailu.me</display-name>
 
     <servlet>
+        <servlet-name>initAccessTokenServlet</servlet-name>
+        <servlet-class>
+            me.hailu.weixin.AccessTokenServlet
+        </servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet>
         <servlet-name>hailume</servlet-name>
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
