@@ -1,13 +1,19 @@
 package me.hailu.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Data;
 import me.hailu.controller.base.BaseController;
 import me.hailu.weixin.AccessTokenServlet;
 import me.hailu.weixin.CheckUtil;
 import me.hailu.weixin.SignUtil;
 import org.apache.commons.io.IOUtils;
+import org.apache.http.client.fluent.Request;
+import org.apache.http.client.fluent.Response;
+import org.apache.http.entity.ContentType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -58,5 +65,29 @@ public class WeixinController extends BaseController {
         ret.put("appId", APP_ID);
         ret.put("doMain", "hailu.me");
         return createMV("weixin", ret);
+    }
+
+    @RequestMapping(value = "/weixin/qrcode", method = RequestMethod.GET)
+    public ModelAndView showWeixinPage(@RequestParam(value = "str")String str) {
+        String body = "{\"action_name\": \"QR_LIMIT_STR_SCENE\", \"action_info\": {\"scene\": {\"scene_str\": \"" + str + "\"}}}";
+        try {
+            Response response = Request.Post("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=" + AccessTokenServlet.getAccessToken())
+                    .bodyString(body, ContentType.APPLICATION_JSON).execute();
+            QrcodeResponse qrcodeResponse = new ObjectMapper().readValue(response.returnContent().asBytes(), QrcodeResponse.class);
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("url", qrcodeResponse.url);
+            params.put("ticket", qrcodeResponse.ticket);
+            return createMV("weixin/qrcode", params);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Data
+    private static class QrcodeResponse {
+        private String ticket;
+        private int expire_seconds;
+        private String url;
     }
 }
