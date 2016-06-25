@@ -68,7 +68,7 @@ public class WeixinController extends BaseController {
     }
 
     @RequestMapping(value = "/weixin/qrcode", method = RequestMethod.GET)
-    public ModelAndView showWeixinPage(@RequestParam(value = "str")String str) {
+    public ModelAndView showQrcode(@RequestParam(value = "str")String str) {
         String body = "{\"action_name\": \"QR_LIMIT_STR_SCENE\", \"action_info\": {\"scene\": {\"scene_str\": \"" + str + "\"}}}";
         try {
             Response response = Request.Post("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=" + AccessTokenServlet.getAccessToken())
@@ -89,5 +89,19 @@ public class WeixinController extends BaseController {
         private String ticket;
         private int expire_seconds;
         private String url;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/weixin/userinfo", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
+    public String showUserInfo(@RequestParam(value = "openid")String openId) {
+        try {
+            Response response = Request.Get("https://api.weixin.qq.com/cgi-bin/user/info?access_token=" + AccessTokenServlet.getAccessToken() +
+                    "&openid=" + openId + "&lang=zh_CN").execute();
+            String result = new String(response.returnContent().asBytes(), "UTF-8");
+            return result;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
