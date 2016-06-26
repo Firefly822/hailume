@@ -6,6 +6,7 @@ import me.hailu.controller.base.BaseController;
 import me.hailu.weixin.AccessTokenServlet;
 import me.hailu.weixin.CheckUtil;
 import me.hailu.weixin.SignUtil;
+import me.hailu.weixin.WeixinKfLogger;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.client.fluent.Response;
@@ -30,6 +31,8 @@ import java.util.Map;
 @Controller
 @RequestMapping(value = "/")
 public class WeixinController extends BaseController {
+
+    private WeixinKfLogger logger = new WeixinKfLogger();
 
     private static final String APP_ID = "wxd1609c7bf1125e78";
     private static final String APP_SECRET = "550ceaaaaa04e387e0c84f35620020e0";
@@ -100,7 +103,7 @@ public class WeixinController extends BaseController {
             String result = new String(response.returnContent().asBytes(), "UTF-8");
             return result;
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("userinfo error", e);
             return null;
         }
     }

@@ -27,7 +27,6 @@ public class UploadServiceImpl implements UploadService {
     private final String SECRET_KEY = "vgLJViubyR-gp2NCQodv2YxQTKFV3L6BDlVJfXQW";
     private final String BUCKET_NAME = "hailume";
 
-    @Override
     public String uploadStream(InputStream inputStream, String key) {
         String qiniuKey = null;
         try {
