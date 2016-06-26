@@ -1,5 +1,6 @@
 package me.hailu.http;
 
+import me.hailu.weixin.WeixinKfLogger;
 import org.springframework.core.Ordered;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,8 +13,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class LoggingMappingExceptionResolver implements HandlerExceptionResolver, Ordered {
 
+    private WeixinKfLogger logger = new WeixinKfLogger();
+
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-        ex.printStackTrace();
+        logger.error("common error", ex);
         return null;
     }
 
