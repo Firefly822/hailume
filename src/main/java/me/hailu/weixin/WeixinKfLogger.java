@@ -23,7 +23,7 @@ public class WeixinKfLogger {
                                 "    \"msgtype\":\"text\",\n" +
                                 "    \"text\":\n" +
                                 "    {\n" +
-                                "         \"content\":\"" + message + " " + e.getMessage() + "\"\n" +
+                                "         \"content\":\"" + message + " " + e.getCause() + "\"\n" +
                                 "    }\n" +
                                 "}", ContentType.APPLICATION_JSON).execute();
             } catch (IOException e1) {

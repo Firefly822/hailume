@@ -107,4 +107,72 @@ public class WeixinController extends BaseController {
             return null;
         }
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/weixin/setButton", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
+    public String setButton() {
+        try {
+            Response response = Request.Post("https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + AccessTokenServlet.getAccessToken())
+                    .bodyString("{\n" +
+                            "     \"button\":[\n" +
+                            "     {\t\n" +
+                            "          \"type\":\"click\",\n" +
+                            "          \"name\":\"今日歌曲\",\n" +
+                            "          \"key\":\"V1001_TODAY_MUSIC\"\n" +
+                            "      },\n" +
+                            "      {\n" +
+                            "           \"name\":\"菜单\",\n" +
+                            "           \"sub_button\":[\n" +
+                            "           {\t\n" +
+                            "               \"type\":\"view\",\n" +
+                            "               \"name\":\"登录\",\n" +
+                            "               \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId +
+                            "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2flogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect\"\n" +
+                            "            },\n" +
+                            "            {\n" +
+                            "               \"type\":\"view\",\n" +
+                            "               \"name\":\"视频\",\n" +
+                            "               \"url\":\"http://v.qq.com/\"\n" +
+                            "            },\n" +
+                            "            {\n" +
+                            "               \"type\":\"click\",\n" +
+                            "               \"name\":\"赞一下我们\",\n" +
+                            "               \"url\":\"V1001_GOOD\"\n" +
+                            "            }]\n" +
+                            "       }]\n" +
+                            " }", ContentType.APPLICATION_JSON).execute();
+            String result = new String(response.returnContent().asBytes(), "UTF-8");
+            return result;
+        } catch (IOException e) {
+            logger.error("userinfo error", e);
+            return null;
+        }
+    }
+
+    @RequestMapping(value = "/weixin/login", method = RequestMethod.GET)
+    public ModelAndView showLoginPage(@RequestParam(value = "code")String code) {
+        try {
+            Response response = Request.Get("https://api.weixin.qq.com/sns/oauth2/access_token?appid=" + AccessTokenServlet.appId +
+                    "&secret=" + AccessTokenServlet.appsecret + "&code=" + code + "&grant_type=authorization_code")
+                    .execute();
+            AccessTokenResponse accessTokenResponse = new ObjectMapper().readValue(response.returnContent().asBytes(), AccessTokenResponse.class);
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("openid", accessTokenResponse.openid);
+            params.put("scope", accessTokenResponse.scope);
+            params.put("access_token", accessTokenResponse.access_token);
+            return createMV("weixin/login", params);
+        } catch (IOException e) {
+            logger.error("/weixin/login", e);
+            return null;
+        }
+    }
+
+    @Data
+    private static class AccessTokenResponse {
+        private String access_token;
+        private int expires_in;
+        private String refresh_token;
+        private String openid;
+        private String scope;
+    }
 }

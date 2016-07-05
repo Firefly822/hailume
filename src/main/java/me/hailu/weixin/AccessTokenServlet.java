@@ -15,8 +15,8 @@ import java.io.IOException;
  */
 public class AccessTokenServlet extends HttpServlet implements Runnable {
 
-    private static final String appId = "wxd1609c7bf1125e78";
-    private static final String appsecret = "550ceaaaaa04e387e0c84f35620020e0";
+    public static final String appId = "wxd1609c7bf1125e78";
+    public static final String appsecret = "550ceaaaaa04e387e0c84f35620020e0";
 
     private static String accessToken = null;
     private static String jsapiTicket = null;
