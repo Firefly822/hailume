@@ -137,11 +137,21 @@ public class WeixinController extends BaseController {
             params.put("openid", accessTokenResponse.openid);
             params.put("scope", accessTokenResponse.scope);
             params.put("access_token", accessTokenResponse.access_token);
+
+            String userInfoStr = showUserInfo(accessTokenResponse.openid);
+            UserInfo userInfo = new ObjectMapper().readValue(userInfoStr, UserInfo.class);
+            params.put("userInfo", userInfo);
             return createMV("weixin/login", params);
         } catch (IOException e) {
             logger.error("/weixin/login", e);
             return null;
         }
+    }
+
+    @Data
+    private static class UserInfo {
+        private String nickname;
+        private String headimgurl;
     }
 
     @Data

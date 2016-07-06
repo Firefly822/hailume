@@ -11,8 +11,6 @@
     <title>Login</title>
 </head>
 <body>
-    <p>openid:${openid}</p>
-    <p>scope:${scope}</p>
-    <p>access_token:${access_token}</p>
+    <p>你好，${userInfo.nickname}</p>
 </body>
 </html>
