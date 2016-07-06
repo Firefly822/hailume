@@ -34,9 +34,6 @@ public class WeixinController extends BaseController {
 
     private WeixinKfLogger logger = new WeixinKfLogger();
 
-    private static final String APP_ID = "wxd1609c7bf1125e78";
-    private static final String APP_SECRET = "550ceaaaaa04e387e0c84f35620020e0";
-
     @ResponseBody
     @RequestMapping(value = "/weixin")
     public String serveWeixin(HttpServletRequest request, HttpServletResponse response) {
@@ -65,7 +62,7 @@ public class WeixinController extends BaseController {
     public ModelAndView showWeixinPage(HttpServletRequest request) {
         String url = request.getRequestURL().toString();
         Map<String, Object> ret = SignUtil.sign(AccessTokenServlet.getAccessToken(), url);
-        ret.put("appId", APP_ID);
+        ret.put("appId", AccessTokenServlet.appId);
         ret.put("doMain", "hailu.me");
         return createMV("weixin", ret);
     }
@@ -116,30 +113,10 @@ public class WeixinController extends BaseController {
                     .bodyString("{\n" +
                             "     \"button\":[\n" +
                             "     {\t\n" +
-                            "          \"type\":\"click\",\n" +
-                            "          \"name\":\"今日歌曲\",\n" +
-                            "          \"key\":\"V1001_TODAY_MUSIC\"\n" +
-                            "      },\n" +
-                            "      {\n" +
-                            "           \"name\":\"菜单\",\n" +
-                            "           \"sub_button\":[\n" +
-                            "           {\t\n" +
-                            "               \"type\":\"view\",\n" +
-                            "               \"name\":\"登录\",\n" +
-                            "               \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId +
-                            "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2flogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect\"\n" +
-                            "            },\n" +
-                            "            {\n" +
-                            "               \"type\":\"view\",\n" +
-                            "               \"name\":\"视频\",\n" +
-                            "               \"url\":\"http://v.qq.com/\"\n" +
-                            "            },\n" +
-                            "            {\n" +
-                            "               \"type\":\"click\",\n" +
-                            "               \"name\":\"赞一下我们\",\n" +
-                            "               \"url\":\"V1001_GOOD\"\n" +
-                            "            }]\n" +
-                            "       }]\n" +
+                            "          \"type\":\"view\",\n" +
+                            "          \"name\":\"首页\",\n" +
+                            "          \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId + "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2flogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect\"\n" +
+                            "      }]\n" +
                             " }", ContentType.APPLICATION_JSON).execute();
             String result = new String(response.returnContent().asBytes(), "UTF-8");
             return result;
