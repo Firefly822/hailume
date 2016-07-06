@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class WeixinKfLogger {
 
-    private List<String> alarmUsers = Arrays.asList("o8CwwwFEUQy-TWGXywmS3fptN5gQ");
+    private List<String> alarmUsers = Arrays.asList("ouOvesiPEdErXwIpeAdJpsJ5zpGg");
 
     public void error(String message, Exception e) {
         for (String openId : alarmUsers) {

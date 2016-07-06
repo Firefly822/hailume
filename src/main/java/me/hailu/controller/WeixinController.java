@@ -139,6 +139,7 @@ public class WeixinController extends BaseController {
             params.put("access_token", accessTokenResponse.access_token);
 
             String userInfoStr = showUserInfo(accessTokenResponse.openid);
+            System.out.println(userInfoStr);
             UserInfo userInfo = new ObjectMapper().readValue(userInfoStr, UserInfo.class);
             params.put("userInfo", userInfo);
             return createMV("weixin/login", params);
