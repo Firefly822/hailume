@@ -115,9 +115,15 @@ public class WeixinController extends BaseController {
                             "     \"button\":[\n" +
                             "     {\t\n" +
                             "          \"type\":\"view\",\n" +
-                            "          \"name\":\"首页\",\n" +
+                            "          \"name\":\"登录\",\n" +
                             "          \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId + "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2flogin&response_type=code&scope=snsapi_base&state=123#wechat_redirect\"\n" +
-                            "      }]\n" +
+                            "      }," +
+                            "     {\t\n" +
+                            "          \"type\":\"view\",\n" +
+                            "          \"name\":\"注册\",\n" +
+                            "          \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId + "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2fregister&response_type=code&scope=snsapi_userinfoe&state=123#wechat_redirect\"\n" +
+                            "      }" +
+                            "]\n" +
                             " }", ContentType.APPLICATION_JSON).execute();
             String result = new String(response.returnContent().asBytes(), "UTF-8");
             return result;
@@ -142,6 +148,27 @@ public class WeixinController extends BaseController {
             String userInfoStr = showUserInfo(accessTokenResponse.openid);
             System.out.println(userInfoStr);
             UserInfo userInfo = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).readValue(userInfoStr, UserInfo.class);
+            params.put("userInfo", userInfo);
+            return createMV("weixin/login", params);
+        } catch (IOException e) {
+            logger.error("/weixin/login", e);
+            return null;
+        }
+    }
+
+    @RequestMapping(value = "/weixin/register", method = RequestMethod.GET)
+    public ModelAndView showRegisterPage(@RequestParam(value = "code")String code) {
+        try {
+            System.out.println("New user register.");
+
+            Response response = Request.Get("https://api.weixin.qq.com/sns/oauth2/access_token?appid=" + AccessTokenServlet.appId +
+                    "&secret=" + AccessTokenServlet.appsecret + "&code=" + code + "&grant_type=authorization_code")
+                    .execute();
+            AccessTokenResponse accessTokenResponse = new ObjectMapper().readValue(response.returnContent().asBytes(), AccessTokenResponse.class);
+            Map<String, Object> params = new HashMap<String, Object>();
+            Response response1 = Request.Get("https://api.weixin.qq.com/sns/userinfo?access_token=" + accessTokenResponse.access_token
+                    + "&openid=" + accessTokenResponse.openid + "&lang=zh_CN").execute();
+            UserInfo userInfo = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).readValue(response1.returnContent().asBytes(), UserInfo.class);
             params.put("userInfo", userInfo);
             return createMV("weixin/login", params);
         } catch (IOException e) {
