@@ -121,7 +121,7 @@ public class WeixinController extends BaseController {
                             "     {\t\n" +
                             "          \"type\":\"view\",\n" +
                             "          \"name\":\"注册\",\n" +
-                            "          \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId + "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2fregister&response_type=code&scope=snsapi_userinfoe&state=123#wechat_redirect\"\n" +
+                            "          \"url\":\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + AccessTokenServlet.appId + "&redirect_uri=http%3a%2f%2fhailu.me%2fweixin%2fregister&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect\"\n" +
                             "      }" +
                             "]\n" +
                             " }", ContentType.APPLICATION_JSON).execute();
