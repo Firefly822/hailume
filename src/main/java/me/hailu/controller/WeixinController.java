@@ -1,5 +1,6 @@
 package me.hailu.controller;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import me.hailu.controller.base.BaseController;
@@ -140,7 +141,7 @@ public class WeixinController extends BaseController {
 
             String userInfoStr = showUserInfo(accessTokenResponse.openid);
             System.out.println(userInfoStr);
-            UserInfo userInfo = new ObjectMapper().readValue(userInfoStr, UserInfo.class);
+            UserInfo userInfo = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).readValue(userInfoStr, UserInfo.class);
             params.put("userInfo", userInfo);
             return createMV("weixin/login", params);
         } catch (IOException e) {
@@ -150,7 +151,7 @@ public class WeixinController extends BaseController {
     }
 
     @Data
-    private static class UserInfo {
+    public static class UserInfo {
         private String nickname;
         private String headimgurl;
     }
