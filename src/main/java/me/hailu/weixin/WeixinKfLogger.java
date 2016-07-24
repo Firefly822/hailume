@@ -1,9 +1,5 @@
 package me.hailu.weixin;
 
-import org.apache.http.client.fluent.Request;
-import org.apache.http.entity.ContentType;
-
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,20 +11,20 @@ public class WeixinKfLogger {
     private List<String> alarmUsers = Arrays.asList("ouOvesiPEdErXwIpeAdJpsJ5zpGg");
 
     public void error(String message, Exception e) {
-        for (String openId : alarmUsers) {
-            try {
-                Request.Post("https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=" + AccessTokenServlet.getAccessToken())
-                        .bodyString("{\n" +
-                                "    \"touser\":\"" + openId + "\",\n" +
-                                "    \"msgtype\":\"text\",\n" +
-                                "    \"text\":\n" +
-                                "    {\n" +
-                                "         \"content\":\"" + message + " " + e.getCause() + "\"\n" +
-                                "    }\n" +
-                                "}", ContentType.APPLICATION_JSON).execute();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-        }
+//        for (String openId : alarmUsers) {
+//            try {
+//                Request.Post("https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=" + AccessTokenServlet.getAccessToken())
+//                        .bodyString("{\n" +
+//                                "    \"touser\":\"" + openId + "\",\n" +
+//                                "    \"msgtype\":\"text\",\n" +
+//                                "    \"text\":\n" +
+//                                "    {\n" +
+//                                "         \"content\":\"" + message + " " + e.getCause() + "\"\n" +
+//                                "    }\n" +
+//                                "}", ContentType.APPLICATION_JSON).execute();
+//            } catch (IOException e1) {
+//                e1.printStackTrace();
+//            }
+//        }
     }
 }
