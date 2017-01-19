@@ -13,21 +13,21 @@
     <title>发表文章 —— 还撸么</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/style.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/responsive.css" rel="stylesheet">
 
-    <link href="/static/css/jquery-ui.css" rel="stylesheet">
-    <link href="/static/css/bootstrap-tokenfield.min.css" rel="stylesheet">
-    <link href="/static/css/fileinput.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/jquery-ui.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap-tokenfield.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/fileinput.min.css" rel="stylesheet">
 
-    <link href="/static/app/css/header.css" rel="stylesheet">
-    <link href="/static/app/css/publish.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/header.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/publish.css" rel="stylesheet">
     <!-- 样式文件 -->
-    <link rel="stylesheet" href="/static/umeditor/themes/default/css/umeditor.css">
+    <link rel="stylesheet" href="http://7oxg65.com1.z0.glb.clouddn.com/static/umeditor/umeditor.min.css">
 </head>
 <body>
     <c:import url="header.jsp"></c:import>
@@ -79,29 +79,29 @@
     </div>
     <iframe id='frameFile' name='frameFile' style='display: none;'></iframe>
 
-    <script src="/static/js/jquery.js"></script>
-    <script src="/static/js/jquery-ui.js"></script>
-    <script src="/static/js/bootstrap.js"></script>
-    <script src="/static/js/masonry.pkgd.min.js"></script>
-    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
-    <script src="/static/js/gmap3.min.js"></script>
-    <script src="/static/js/jquery.isotope.min.js"></script>
-    <script src="/static/js/jquery.easing.js"></script>
-    <script src="/static/js/jquery.form.js"></script>
-    <script src="/static/js/script.js"></script>
-    <script src="/static/js/bootstrap-tokenfield.js"></script>
-    <script src="/static/js/fileinput.min.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery-ui.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/bootstrap.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/masonry.pkgd.min.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/gmap3.min.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.isotope.min.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.easing.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.form.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/script.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/bootstrap-tokenfield.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/fileinput.min.js"></script>
 
-    <script src="/static/app/js/publish_page.js"></script>
-    <script src="/static/app/js/header.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/publish_page.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/header.js"></script>
     <!-- 引用jquery -->
     <%--<script src="/static/umeditor/third-party/jquery.min.js"></script>--%>
     <!-- 配置文件 -->
-    <script type="text/javascript" src="/static/umeditor/umeditor.config.js"></script>
+    <script type="text/javascript" src="http://7oxg65.com1.z0.glb.clouddn.com/static/umeditor/umeditor.config.js"></script>
     <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="/static/umeditor/umeditor.js"></script>
+    <script type="text/javascript" src="http://7oxg65.com1.z0.glb.clouddn.com/static/umeditor/umeditor.min.js"></script>
     <!-- 语言包文件 -->
-    <script type="text/javascript" src="/static/umeditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="http://7oxg65.com1.z0.glb.clouddn.com/static/umeditor/zh-cn.js"></script>
     <script>
         var articleId = 0;
         var image;

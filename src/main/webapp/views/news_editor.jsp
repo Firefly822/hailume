@@ -25,7 +25,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/static/bower_components/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css">
-    <link rel="stylesheet" href="/static/app/css/editor.css">
+    <link rel="stylesheet" href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/editor.css">
 
 </head>
 <body>
@@ -69,7 +69,7 @@
             <div class="row fileupload-buttonbar" style="padding-left:15px;">
                 <div class="thumbnail">
                     <img id="weixin_show" style="height:180px;margin-top:10px;margin-bottom:8px;"
-                         src="/static/img/default_bg.png" data-holder-rendered="true">
+                         src="http://7oxg65.com1.z0.glb.clouddn.com/static/img/default_bg.png" data-holder-rendered="true">
 
                     <div class="progress progress-striped active" role="progressbar" aria-valuemin="10"
                          aria-valuemax="100" aria-valuenow="0">
@@ -110,7 +110,7 @@
 <!-- JS -->
 <script src="/static/bower_components/medium-editor-insert-plugin/dist/js/medium-editor-insert-plugin.min.js"></script>
 
-<script src="/static/app/js/editor.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/editor.js"></script>
 
 <script>
     var editor = new MediumEditor('.editable');

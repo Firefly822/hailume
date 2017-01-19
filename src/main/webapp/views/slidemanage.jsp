@@ -17,39 +17,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="http://7oxg65.com1.z0.glb.clouddn.com/static/img/favicon.png">
 
     <title>Danish.</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <!--<link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>-->
     <!--<link href='http://fonts.googleapis.com/css?family=Noto+Serif:700,400italic' rel='stylesheet' type='text/css'>-->
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/responsive.css" rel="stylesheet">
-    <link href="/static/css/fileinput.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/style.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/responsive.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/fileinput.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="/static/js/html5shiv.js"></script>
-    <script src="/static/js/respond.min.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/html5shiv.js"></script>
+    <script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
 
 <!-- begin:header -->
-<section id="header" style="background: url(/static/img/header.jpg) center center;">
+<section id="header" style="background: url(http://7oxg65.com1.z0.glb.clouddn.com/static/img/header.jpg) center center;">
     <div class="overlay"></div>
 </section>
 <!-- end:header -->
 <textarea id="theTemplate" style="display: none">
     <li class="bag dress" title="-1">
         <div class="portfolio-item">
-            <div class="portfolio-img" style="background: url(/static/img/img01.jpg);"></div>
+            <div class="portfolio-img" style="background: url(http://7oxg65.com1.z0.glb.clouddn.com/static/img/img01.jpg);"></div>
             <div class="portfolio-caption">
                 <div class="portfolio-text">
                     <h3>小编教你排位上铂金</h3>
@@ -143,20 +143,20 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/jquery-ui.js"></script>
-<script src="/static/js/bootstrap.js"></script>
-<script src="/static/js/masonry.pkgd.min.js"></script>
-<script src="/static/js/imagesloaded.pkgd.min.js"></script>
-<script src="/static/js/gmap3.min.js"></script>
-<script src="/static/js/jquery.isotope.min.js"></script>
-<script src="/static/js/jquery.easing.js"></script>
-<script src="/static/js/jquery.form.js"></script>
-<script src="/static/js/script.js"></script>
-<script src="/static/js/bootstrap-tokenfield.js"></script>
-<script src="/static/js/fileinput.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery-ui.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/bootstrap.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/masonry.pkgd.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/imagesloaded.pkgd.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/gmap3.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.isotope.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.easing.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.form.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/script.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/bootstrap-tokenfield.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/fileinput.min.js"></script>
 
 
-<script src="/static/app/js/carousel.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/carousel.js"></script>
 </body>
 </html>

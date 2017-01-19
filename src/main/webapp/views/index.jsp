@@ -10,20 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/static/img/favicon.png">
+    <link rel="shortcut icon" href="http://7oxg65.com1.z0.glb.clouddn.com/static/img/favicon.png">
 
     <title>还撸么——宅乐园</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/style.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/responsive.css" rel="stylesheet">
 
-    <link href="/static/app/css/header.css" rel="stylesheet">
-    <link href="/static/app/css/index.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/header.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/index.css" rel="stylesheet">
     <%--<link type="text/css" rel="stylesheet" href="http://static.qiyi.com/css/common/v3-index-iqiyi/index-iqiyi-v1.css" />--%>
 
 </head>
@@ -138,15 +138,15 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/js/jquery.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/masonry.pkgd.min.js"></script>
-<script src="/static/js/imagesloaded.pkgd.min.js"></script>
-<script src="/static/js/gmap3.min.js"></script>
-<script src="/static/js/jquery.isotope.min.js"></script>
-<script src="/static/js/jquery.easing.js"></script>
-<script src="/static/js/script.js"></script>
-<script src="/static/app/js/header.js"></script>
-<script src="/static/app/js/index.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/bootstrap.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/masonry.pkgd.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/imagesloaded.pkgd.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/gmap3.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.isotope.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.easing.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/script.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/header.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/index.js"></script>
 </body>
 </html>

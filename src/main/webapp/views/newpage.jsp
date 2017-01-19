@@ -18,10 +18,10 @@
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/app/css/page.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/page.css" rel="stylesheet">
 </head>
 <body>
 <div class="blog-masthead">
@@ -160,7 +160,7 @@
     </p>
 </div>
 
-<script src="/static/js/jquery.js"></script>
-<script src="/static/app/js/page.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/app/js/page.js"></script>
 </body>
 </html>

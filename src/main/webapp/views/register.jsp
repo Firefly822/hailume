@@ -13,17 +13,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/static/img/favicon.png">
+    <link rel="shortcut icon" href="http://7oxg65.com1.z0.glb.clouddn.com/static/img/favicon.png">
 
     <title>注册还撸么，走上人生巅峰</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/style.css" rel="stylesheet">
+    <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/responsive.css" rel="stylesheet">
 </head>
 <body>
 
@@ -38,12 +38,12 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/bootstrap.js"></script>
-<script src="/static/js/masonry.pkgd.min.js"></script>
-<script src="/static/js/imagesloaded.pkgd.min.js"></script>
-<script src="/static/js/gmap3.min.js"></script>
-<script src="/static/js/jquery.isotope.min.js"></script>
-<script src="/static/js/jquery.easing.js"></script>
-<script src="/static/js/script.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/bootstrap.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/masonry.pkgd.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/imagesloaded.pkgd.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/gmap3.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.isotope.min.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/jquery.easing.js"></script>
+<script src="http://7oxg65.com1.z0.glb.clouddn.com/static/js/script.js"></script>
 </html>

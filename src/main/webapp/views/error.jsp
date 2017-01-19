@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/static/img/favicon.png">
+    <link rel="shortcut icon" href="http://7oxg65.com1.z0.glb.clouddn.com/static/img/favicon.png">
 
     <title>404！你们撸吧，我不撸了 —— 还撸么，宅乐园</title>
 
@@ -18,7 +18,7 @@
 
 <div style="width: 1200px;height: auto;text-align: center;margin: auto;">
     <a href="/">
-        <img style="width: 100%" src="/static/img/404.jpg" />
+        <img style="width: 100%" src="http://7oxg65.com1.z0.glb.clouddn.com/static/img/404.jpg" />
     </a>
 </div>
 

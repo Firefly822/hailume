@@ -58,7 +58,7 @@
 <!-- end:navbar -->
 
 <!-- begin:header -->
-<section id="header" style="background: url(/static/img/header.jpg) center center;">
+<section id="header" style="background: url(http://7oxg65.com1.z0.glb.clouddn.com/static/img/header.jpg) center center;">
     <div class="overlay"></div>
 </section>
 <!-- end:header -->

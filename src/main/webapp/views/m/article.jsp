@@ -6,15 +6,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/static/img/favicon.png">
+  <link rel="shortcut icon" href="http://7oxg65.com1.z0.glb.clouddn.com/static/img/favicon.png">
 
   <title>${article.title} —— 还撸么 宅生活</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="/static/css/style.css" rel="stylesheet">
-  <link href="/static/app/css/article.css" rel="stylesheet">
+  <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/css/style.css" rel="stylesheet">
+  <link href="http://7oxg65.com1.z0.glb.clouddn.com/static/app/css/article.css" rel="stylesheet">
 </head>
 <body>
 
